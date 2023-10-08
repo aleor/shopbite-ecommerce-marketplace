@@ -1,5 +1,9 @@
 # Shopbite - eCommerce Marketplace for Indonesian market
 
+Available at: https://shopbite-ecommerce-marketplace.vercel.app/
+
+Demo store: https://shopbite-ecommerce-marketplace.vercel.app/demo
+
 ## Overview
 
 This eCommerce marketplace app has been developed by me for the Indonesian market, offering a robust set of features tailored to meet the specific needs of local businesses and shoppers.
