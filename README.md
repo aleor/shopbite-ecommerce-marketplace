@@ -2,7 +2,7 @@
 
 ## Overview
 
-This eCommerce marketplace app has been developed for the Indonesian market, offering a robust set of features tailored to meet the specific needs of local businesses and shoppers.
+This eCommerce marketplace app has been developed by me for the Indonesian market, offering a robust set of features tailored to meet the specific needs of local businesses and shoppers.
 Key features:
 
 - <strong>Store Creation</strong>: Easy set up and customization of the online store, including defining catalog groups ('collections') and items. Granular control with item variants, add-ons, and other per-item customizations.
@@ -18,4 +18,4 @@ Key features:
 
 ## Technologies
 
-React, Next.js, TypeScript, Chakra UI, Firebase (Functions, Storage, Firestore), Google Analytics, Xendit (Southeast Asian fintech company, payment provider). 
+React, Next.js, TypeScript, Chakra UI, Firebase (Functions, Storage, Firestore), Google Analytics, Chart.js, Xendit (Southeast Asian fintech company, payment provider). 
