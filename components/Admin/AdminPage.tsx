@@ -1,28 +1,18 @@
+import { differenceInDays } from 'date-fns';
 import { getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { doc } from 'firebase/firestore';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 import { useMemo, useState } from 'react';
-import {
-  useAuthState,
-  useSendEmailVerification
-} from 'react-firebase-hooks/auth';
+import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 
-import {
-  Box,
-  Center,
-  Flex,
-  HStack,
-  Spinner,
-  Text,
-  useBreakpointValue
-} from '@chakra-ui/react';
+import { Box, Center, Flex, HStack, Spinner, Text, useBreakpointValue } from '@chakra-ui/react';
 
-import { differenceInDays } from 'date-fns';
 import { db } from '../../firebase/firestore';
 import { functionsRegion } from '../../firebase/functions';
 import { Shop, shopConverter } from '../../models';
+import { adminSettings } from './adminSettings';
 import Content from './Content/Content';
 import AdminHeader from './Header/AdminHeader';
 import { ShopContext } from './hooks/shopContext';
@@ -30,7 +20,6 @@ import NavSidebar from './Navigation/NavSidebar/NavSidebar';
 import AdminContactVerificationBar from './VerificationBar/AdminContactVerificationBar';
 import EmailVerificationBar from './VerificationBar/EmailVerificationBar';
 import PremiumEndDateVerificationBar from './VerificationBar/PremiumEndDateVerificationBar';
-import { adminSettings } from './adminSettings';
 
 const auth = getAuth();
 
@@ -75,7 +64,7 @@ const AdminPage = () => {
       <Center pt="10">
         <HStack spacing="4">
           <Spinner color="brand.blue"></Spinner>
-          <Text>Membuat data toko...</Text>
+          <Text>Loading shop data...</Text>
         </HStack>
       </Center>
     );
@@ -85,7 +74,7 @@ const AdminPage = () => {
     return (
       <Center pt="10">
         <Text>
-          Terjadi kesalahan dalam percobaan untuk mengambil informasi toko{' '}
+          An error occurred in the attempt to retrieve shop information{' '}
           {error ? `(${error})` : null}
         </Text>
       </Center>

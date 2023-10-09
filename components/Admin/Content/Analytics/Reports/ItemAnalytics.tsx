@@ -1,24 +1,11 @@
 import { doc } from 'firebase/firestore';
 import { useDocumentDataOnce } from 'react-firebase-hooks/firestore';
 
-import {
-  Box,
-  Heading,
-  HStack,
-  Image,
-  Skeleton,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Heading, HStack, Image, Skeleton, Text, VStack } from '@chakra-ui/react';
 
 import { db } from '../../../../../firebase/firestore';
 import { formatPrice } from '../../../../../libs/formatPrice';
-import {
-  getThumbnailUrl,
-  Item,
-  itemConverter,
-  Shop,
-} from '../../../../../models';
+import { getThumbnailUrl, Item, itemConverter, Shop } from '../../../../../models';
 import { ItemAnalyticsResult } from '../../../../../models/analytics';
 import ReportTextRow from '../ReportTextRow';
 
@@ -96,13 +83,13 @@ const ItemAnalytics = ({
 
       <VStack w="100%" spacing="2">
         <ReportTextRow
-          label="Ditambah ke keranjang"
+          label="Added to cart"
           value={item.addToCartCount}
         />
-        <ReportTextRow label="Detail Produk Dibuka" value={item.viewCount} />
-        <ReportTextRow label="Dipesan" value={item.purchasedItemsCount} />
+        <ReportTextRow label="Product Details Viewed" value={item.viewCount} />
+        <ReportTextRow label="Ordered" value={item.purchasedItemsCount} />
         <ReportTextRow
-          label="Penjualan Produk"
+          label="Product Sales"
           value={formatPrice(item.itemRevenue)}
         />
       </VStack>

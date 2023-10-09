@@ -14,20 +14,20 @@ export type NavMenu = {
 
 export const menu: NavMenu = [
   {
-    groupName: 'Etalase',
+    groupName: 'Shop Settings',
     items: [
-      { label: 'Produk', query: 'items' },
-      { label: 'Koleksi', query: 'collections' },
-      { label: 'Link', query: 'links' },
+      { label: 'Items', query: 'items' },
+      { label: 'Collections', query: 'collections' },
+      { label: 'Links', query: 'links' },
     ],
   },
   {
-    groupName: 'Pengelolaan',
+    groupName: 'Management',
     items: [
-      { label: 'Daftar Pesanan', query: 'orders' },
-      { label: 'Analitik', query: 'analytics' },
+      { label: 'Orders', query: 'orders' },
+      { label: 'Analytics', query: 'analytics' },
       { label: 'Upgrade', query: 'upgrade' },
-      { label: 'Pengaturan Akun', query: 'account' },
+      { label: 'Account Settings', query: 'account' },
     ],
   },
 ];

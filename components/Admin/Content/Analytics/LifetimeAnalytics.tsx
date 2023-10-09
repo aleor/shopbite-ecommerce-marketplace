@@ -47,7 +47,7 @@ const LifetimeAnalytics = () => {
     return (
       <Center py="4">
         <Text fontFamily="poppins">
-          Tidak berhasil memuat data analitik, harap mencoba kembali.
+          Unable to load analytics data, please try again.
         </Text>
       </Center>
     );
@@ -61,13 +61,13 @@ const LifetimeAnalytics = () => {
         fontWeight="semibold"
         fontSize="24px"
       >
-        Analitik Lifetime
+        Lifetime Analytics
       </Heading>
       {isValidating ? (
         <Center pt="2">
           <HStack spacing="4">
             <Spinner color="brand.blue"></Spinner>
-            <Text fontFamily="poppins">Memuat data...</Text>
+            <Text fontFamily="poppins">Loading data...</Text>
           </HStack>
         </Center>
       ) : (
@@ -78,19 +78,19 @@ const LifetimeAnalytics = () => {
           columns={{ base: 4, sm: 2, lg: 4 }}
         >
           <AnalyticsCard
-            title="Kunjungan Toko"
+            title="Shop Visits"
             value={numberFormatter(shopAnalytics?.totalCatalogVisits)}
           />
           <AnalyticsCard
-            title="Produk Dibuka"
+            title="Product Views"
             value={numberFormatter(shopAnalytics?.totalItemsViewed)}
           />
           <AnalyticsCard
-            title="Jumlah Pesanan"
+            title="Orders"
             value={numberFormatter(shopAnalytics?.totalOrdersCreated)}
           />
           <AnalyticsCard
-            title="Total Transaksi"
+            title="Total Transactions"
             value={moneyValueFormatter(
               shopAnalytics?.totalPurchaseRevenue,
               shop.currency

@@ -16,12 +16,12 @@ const EmailVerificationBar = ({
   return (
     <VerificationBar>
       <Text color="brand.error">
-        Untuk mempublikasikan toko Anda, Anda harus melakukan verifikasi ke
-        email terdaftar Anda. Kami telah mengirimkan email verifikasi ke alamat
-        email Anda.
+        To publish your store, you will need to verify
+        your registered email. We have sent a verification email to
+        your email address.
       </Text>
       {emailSent ? (
-        <Text>Email verifikasi telah dikirimkan kembali!</Text>
+        <Text>The verification email has been sent</Text>
       ) : (
         <Text>
           <Link
@@ -31,13 +31,13 @@ const EmailVerificationBar = ({
               setEmailSent(true);
             }}
           >
-            Klik untuk meminta ulang email verifikasi
+            Click to send verification email
           </Link>{' '}
           or
         </Text>
       )}
       <Link color="brand.green" onClick={checkEmailStatus}>
-        Klik untuk refresh status verifikasi Anda
+        Click to refresh your verification status
       </Link>
     </VerificationBar>
   );

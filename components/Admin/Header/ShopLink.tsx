@@ -12,7 +12,7 @@ const ShopLink = ({ link }: { link: string }) => {
         fontFamily="poppins"
         alignItems="center"
       >
-        <Text>Link Toko: </Text>
+        <Text>Shop Link: </Text>
         <Link
           href={link}
           isExternal

@@ -1,14 +1,7 @@
 import { useCallback } from 'react';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
 
-import {
-  Box,
-  Heading,
-  HStack,
-  IconButton,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Heading, HStack, IconButton, Text, useBreakpointValue } from '@chakra-ui/react';
 
 import { UpgradeTabMode } from './Upgrade';
 
@@ -26,11 +19,11 @@ const UpgradePageHeader = ({
   const renderTitle = useCallback(() => {
     switch (mode) {
       case 'view_all_benefits':
-        return 'Tingkatkan Penjualan Anda';
+        return 'Boost Your Sales';
       case 'view_free_package':
-        return 'Manfaat yang Anda Miliki';
+        return 'Benefits You Have';
       case 'select_plan':
-        return 'Pilih Durasi Pembelian Paket Premium';
+        return 'Choose the Premium Package Purchase Duration';
       default:
         return '';
     }
@@ -39,9 +32,9 @@ const UpgradePageHeader = ({
   const renderText = useCallback(() => {
     switch (mode) {
       case 'view_all_benefits':
-        return 'Dapatkan manfaat lebih dan maksimalkan penjualan Anda dengan fitur Akun Premium dari Shopbite';
+        return 'Get more benefits and maximize your sales with the Premium Account features from Shopbite';
       case 'view_free_package':
-        return 'Nikmati manfaat dari fitur utama Shopbite gratis hingga selamanya';
+        return `Enjoy the benefits of Shopbite's key features free forever`;
       default:
         return '';
     }
@@ -54,7 +47,7 @@ const UpgradePageHeader = ({
           <IconButton
             icon={<HiOutlineArrowLeft size={isMobile ? '14px' : '18px'} />}
             onClick={onClose}
-            aria-label="Kembali"
+            aria-label="Back"
             variant="ghost"
             color="brand.green"
             size={isMobile ? 'xs' : 'md'}

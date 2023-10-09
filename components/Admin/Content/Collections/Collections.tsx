@@ -56,7 +56,7 @@ const Collections = ({
   const onChangesSaved = (numberOfChanges: number) => {
     if (numberOfChanges > 0) {
       showToast({
-        title: 'Perubahan berhasil disimpan',
+        title: 'Changes saved successfully',
         status: 'success',
       });
     }

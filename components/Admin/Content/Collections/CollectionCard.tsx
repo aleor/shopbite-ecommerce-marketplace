@@ -2,15 +2,7 @@ import { useState } from 'react';
 import { HiMinusCircle } from 'react-icons/hi';
 
 import {
-  Box,
-  HStack,
-  IconButton,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Text,
-  useBreakpointValue,
-  VStack,
+    Box, HStack, IconButton, Input, InputGroup, InputRightAddon, Text, VStack
 } from '@chakra-ui/react';
 
 import { Collection, getThumbnailUrl } from '../../../../models';
@@ -34,7 +26,6 @@ const CollectionCard = ({
   }) => void;
   onDelete?: () => void;
 }) => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
   const [collectionLabel, setCollectionLabel] = useState(collection.label);
 
   const onChangeLabel = (label: string) => {
@@ -117,7 +108,7 @@ const CollectionCard = ({
                   borderRight="none"
                   _focus={{ outline: 'none' }}
                   _hover={{ borderColor: 'inherit' }}
-                  placeholder="Nama Koleksi"
+                  placeholder="Collection title"
                   fontSize="12px"
                 />
                 <InputRightAddon
@@ -139,7 +130,7 @@ const CollectionCard = ({
                   fontFamily="poppins"
                   fontSize={{ base: '14px', sm: '12px', lg: '14px' }}
                 >
-                  Koleksi ini masih kosong
+                  This collection is still empty
                 </Text>
               )}
 
@@ -149,7 +140,7 @@ const CollectionCard = ({
                   fontSize={{ base: '14px', sm: '12px', lg: '14px' }}
                 >
                   {collection.itemList.length}
-                  {' produk'}
+                  {' product(s)'}
                 </Text>
               )}
             </Box>

@@ -49,7 +49,7 @@ const Content = () => {
   if (collectionsLoadingError || itemsLoadingError) {
     return (
       <Center width="100%" height="100%">
-        <Text>Gagal memuat data toko Anda, harap mencoba kembali.</Text>
+        <Text>Failed to load shop data, please try again.</Text>
       </Center>
     );
   }
@@ -75,7 +75,7 @@ const Content = () => {
               <Center pt="10">
                 <HStack spacing="4">
                   <Spinner color="brand.blue"></Spinner>
-                  <Text>Memuat data analitik...</Text>
+                  <Text>Loading analytics data....</Text>
                 </HStack>
               </Center>
             }

@@ -13,7 +13,7 @@ const Links = () => {
 
   return (
     <>
-      <SpinnerOverlay visible={isSaving} message="Menyimpan perubahan..." />
+      <SpinnerOverlay visible={isSaving} message="Saving changes..." />
       <Box
         px={{ base: '4', sm: '2', md: '4' }}
         py="4"

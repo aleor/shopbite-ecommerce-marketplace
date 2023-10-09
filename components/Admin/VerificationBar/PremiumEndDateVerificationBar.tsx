@@ -9,11 +9,11 @@ const PremiumEndDateVerificationBar = () => {
   return (
     <VerificationBar>
       <Text color="brand.error">
-        Oops.. Status Akun Premium Kamu sudah hampir habis dan berpotensi menjadi Akun Standar.
+        Oops... Your Premium Account status is about to expire and potentially become a Standard Account.
       </Text>
 
       <Link color="brand.green" onClick={() => navigateTo('upgrade')}>
-        Klik disini untuk memperpanjang Akun Premium Kamu
+        Click here to extend your Premium Account
       </Link>
     </VerificationBar>
   );

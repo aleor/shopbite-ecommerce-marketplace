@@ -130,7 +130,7 @@ const LinksAnalytics = ({
         fontSize="20px"
         fontWeight="semibold"
       >
-        Top 5 Link Dibuka
+        Top 5 Links Opened
       </Heading>
 
       {isValidating ? (
@@ -138,7 +138,7 @@ const LinksAnalytics = ({
           <Spinner color="brand.blue" />
         </Box>
       ) : error ? (
-        <Box>Gagal memuat data statistik, harap mencoba kembali</Box>
+        <Box>Failed to load statistics, please try again</Box>
       ) : (
         <Box pt="2" w="100%">
           <Chart

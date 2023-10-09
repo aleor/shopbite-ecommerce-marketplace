@@ -2,23 +2,11 @@ import { format } from 'date-fns';
 import { useContext, useEffect, useState } from 'react';
 import useSWR from 'swr';
 
-import {
-  Box,
-  Heading,
-  HStack,
-  SimpleGrid,
-  Spinner,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Heading, HStack, SimpleGrid, Spinner, Stack, Text, VStack } from '@chakra-ui/react';
 
 import { mapToItemAnalyticsResult } from '../../../../../libs/analytics/mapToItemAnalyticsResult';
 import fetcher from '../../../../../libs/fetcher';
-import {
-  GAReportModel,
-  ItemAnalyticsResult,
-} from '../../../../../models/analytics';
+import { GAReportModel, ItemAnalyticsResult } from '../../../../../models/analytics';
 import { ShopContext } from '../../../hooks/shopContext';
 import ItemAnalytics from './ItemAnalytics';
 
@@ -78,7 +66,7 @@ const ItemsAnalytics = ({
           fontSize="20px"
           fontWeight="semibold"
         >
-          Analitik Produk
+          Product Analytics
         </Heading>
         <Text
           fontFamily="source"
@@ -86,7 +74,7 @@ const ItemsAnalytics = ({
           fontWeight="normal"
           color="brand.black40"
         >
-          Data yang ditampilkan adalah 10 produk terpopuler
+          The data displayed are the 10 most popular products
         </Text>
       </Stack>
 
@@ -95,7 +83,7 @@ const ItemsAnalytics = ({
           <Spinner color="brand.blue" />
         </Box>
       ) : error ? (
-        <Box>Gagal memuat data statistik, harap mencoba kembali</Box>
+        <Box>Failed to load statistics, please try again</Box>
       ) : (
         <SimpleGrid
           pt="4"

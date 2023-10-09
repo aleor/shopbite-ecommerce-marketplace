@@ -122,8 +122,8 @@ const CollectionDetails = ({
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal mengurutkan ulang koleksi',
-        description: 'Harap mencoba kembali',
+        title: 'Failed to update collection sorting',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -136,7 +136,7 @@ const CollectionDetails = ({
 
   return (
     <>
-      <SpinnerOverlay visible={isSaving} message="Menyimpan perubahan..." />
+      <SpinnerOverlay visible={isSaving} message="Saving changes..." />
       <Box pointerEvents={isSaving ? 'none' : 'all'}>
         <HStack justifyContent="space-between" pb="2">
           <HStack>
@@ -175,7 +175,7 @@ const CollectionDetails = ({
                 }}
                 disabled={collection.itemList?.length < 2}
               >
-                Atur urutan produk
+                Manage product order
               </Button>
               <Button
                 color="brand.green"
@@ -187,7 +187,7 @@ const CollectionDetails = ({
                 fontSize="14px"
                 display={{ base: 'flex', sm: 'none', lg: 'flex' }}
               >
-                Tambah atau edit pilihan produk
+                Add or edit product options
               </Button>
             </HStack>
           )}
@@ -211,7 +211,7 @@ const CollectionDetails = ({
                 variant={isMobile ? 'link' : 'primary'}
                 _focus={{ outline: 'none' }}
               >
-                Simpan perubahan
+                Save changes
               </Button>
             </Flex>
           )}
@@ -229,7 +229,7 @@ const CollectionDetails = ({
           display={{ base: 'none', sm: 'flex', lg: 'none' }}
           isDisabled={reorderMode}
         >
-          Tambah atau edit pilihan produk
+          Add or edit product options
         </Button>
 
         <Divider

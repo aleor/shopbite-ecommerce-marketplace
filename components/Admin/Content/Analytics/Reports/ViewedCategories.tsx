@@ -16,7 +16,7 @@ const ViewedCategories = ({
         fontSize="20px"
         fontWeight="semibold"
       >
-        Koleksi Produk Dipilih
+        Product Collection Analytics
       </Heading>
 
       {collectionResult?.length ? (
@@ -32,7 +32,7 @@ const ViewedCategories = ({
         </Box>
       ) : (
         <Box w="100%" pt="4" color="brand.black40">
-          Tidak ada data tersedia untuk kurun waktu yang dipilih
+          No data available for the selected timeframe
         </Box>
       )}
     </VStack>

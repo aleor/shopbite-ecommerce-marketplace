@@ -1,13 +1,7 @@
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useContext, useState } from 'react';
 
-import {
-  Button,
-  Text,
-  useBreakpointValue,
-  useDisclosure,
-  VStack,
-} from '@chakra-ui/react';
+import { Button, Text, useBreakpointValue, useDisclosure, VStack } from '@chakra-ui/react';
 
 import { db } from '../../../../../firebase/firestore';
 import { useToast } from '../../../../../libs/useToast';
@@ -38,14 +32,14 @@ const ManagementSettings = () => {
       setIsSaving(false);
       showToast({
         status: 'success',
-        title: 'Status toko Anda berhasil diganti',
+        title: 'Your store status was successfully changed',
       });
     } catch (error) {
       setIsSaving(false);
       showToast({
         status: 'error',
-        title: 'Status toko Anda tidak berhasil diganti',
-        description: 'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+        title: 'Your store status was not updated',
+        description: 'An error occurred during save, please try again',
       });
     }
   };
@@ -57,7 +51,7 @@ const ManagementSettings = () => {
   return (
     <>
       <VStack spacing="3" alignItems="flex-start" w="100%">
-        <SectionHeader title="Manajemen Toko">
+        <SectionHeader title="Shop Management">
           {isMobile ? (
             <Button
               fontFamily="poppins"
@@ -74,10 +68,10 @@ const ManagementSettings = () => {
               onClick={onOpen}
             >
               {isSaving
-                ? 'Menyimpan...'
+                ? 'Saving...'
                 : shop.isActive
-                ? 'Tutup Toko Sementara'
-                : 'Buka Toko Kembali'}
+                ? 'Temporarily Close Shop'
+                : 'Reopen Shop'}
             </Button>
           ) : (
             <Button
@@ -88,10 +82,10 @@ const ManagementSettings = () => {
               isDisabled={isSaving}
             >
               {isSaving
-                ? 'Menyimpan...'
+                ? 'Saving...'
                 : shop.isActive
-                ? 'Tutup Toko Sementara'
-                : 'Buka Toko Kembali'}
+                ? 'Temporarily Close Shop'
+                : 'Reopen Shop'}
             </Button>
           )}
         </SectionHeader>
@@ -101,7 +95,7 @@ const ManagementSettings = () => {
           fontSize="16px"
           fontWeight="normal"
           color="brand.black40"
-        >{`Toko Anda sedang ${shop.isActive ? 'aktif' : 'tutup'}.`}</Text>
+        >{`Your shop is ${shop.isActive ? 'active' : 'closed'}.`}</Text>
       </VStack>
 
       <ConfirmationModal
@@ -115,11 +109,11 @@ const ManagementSettings = () => {
         title=""
         message={
           shop.isActive
-            ? 'Apakah Anda yakin ingin menutup toko untuk sementara waktu?'
-            : 'Apakah Anda yakin ingin membuka toko kembali?'
+            ? 'Are you sure you want to close your shop for a while?'
+            : 'Are you sure you want to reopen the shop?'
         }
-        confirmButtonLabel={shop?.isActive ? 'Tutup Sementara' : 'Buka Kembali'}
-        cancelButtonLabel={'Batalkan'}
+        confirmButtonLabel={shop?.isActive ? 'Temporarily Close' : 'Reopen Shop'}
+        cancelButtonLabel={'Cancel'}
       />
     </>
   );

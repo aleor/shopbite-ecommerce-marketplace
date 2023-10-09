@@ -33,7 +33,7 @@ const DeviceAnalytics = ({
         fontSize="20px"
         fontWeight="semibold"
       >
-        Analitik Perangkat
+        Device Analytics
       </Heading>
 
       <Box pt="2" w="100%">
@@ -65,8 +65,8 @@ const DeviceAnalytics = ({
           <Table>
             <Thead>
               <Tr>
-                <Th>Kategori Perangkat</Th>
-                <Th isNumeric>Jumlah Pengguna</Th>
+                <Th>Device Category</Th>
+                <Th isNumeric>Number of Users</Th>
               </Tr>
             </Thead>
             <Tbody>

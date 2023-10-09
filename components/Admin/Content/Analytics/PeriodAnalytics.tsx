@@ -7,16 +7,7 @@ import DatePicker from 'react-datepicker';
 import useSWR from 'swr';
 
 import {
-  Box,
-  Center,
-  FormControl,
-  Heading,
-  HStack,
-  Link,
-  Spinner,
-  Stack,
-  Text,
-  VStack,
+    Box, Center, FormControl, Heading, HStack, Link, Spinner, Stack, Text, VStack
 } from '@chakra-ui/react';
 
 import { mapToCountableResult } from '../../../../libs/analytics/mapToCountableResult';
@@ -93,7 +84,7 @@ const PeriodAnalytics = ({}) => {
     return (
       <Center py="4">
         <Text fontFamily="poppins">
-          Gagal memuat data analitik, harap mencoba kembali
+          Failed to load analytics data, please try again
         </Text>
       </Center>
     );
@@ -114,7 +105,7 @@ const PeriodAnalytics = ({}) => {
           fontWeight="semibold"
           fontSize="24px"
         >
-          Analitik Periode
+          Analytic Period
         </Heading>
         <FormControl w={{ base: '25%', sm: '100%', lg: '25%' }}>
           <DatePicker
@@ -140,12 +131,12 @@ const PeriodAnalytics = ({}) => {
           fontFamily="poppins"
           fontSize={{ base: '16px', sm: '14px', md: '16px' }}
         >
-          Anda hanya bisa mengakses data analitik hingga maksimal 7 hari
-          kebelakang. Upgrade dengan{' '}
+          You can only access analytics data up to a maximum of 7 days
+          back. Upgrade with{' '}
           <NextLink href={getLink('upgrade')}>
-            <Link>Paket Premium</Link>
+            <Link>Premium package</Link>
           </NextLink>{' '}
-          untuk mengakses data analitik secara penuh.
+          to access full analytics data.
         </Text>
       )}
 
@@ -154,7 +145,7 @@ const PeriodAnalytics = ({}) => {
           <HStack spacing="4">
             <Spinner color="brand.blue"></Spinner>
             <Text fontFamily="poppins">
-              Memuat data analitik untuk periode yang dipilih...
+              Loading data for the selected period...
             </Text>
           </HStack>
         </Center>

@@ -2,7 +2,7 @@ import { Box, CircularProgress, HStack, Text } from '@chakra-ui/react';
 
 const SpinnerOverlay = ({
   visible,
-  message = 'Menyimpan perubahan...',
+  message = 'Sacing changes...',
 }: {
   visible: boolean;
   message?: string;

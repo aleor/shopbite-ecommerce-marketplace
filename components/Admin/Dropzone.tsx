@@ -1,14 +1,7 @@
 import { useRef, useState } from 'react';
 import { HiOutlinePlusCircle } from 'react-icons/hi';
 
-import {
-  Center,
-  IconButton,
-  Input,
-  Square,
-  Tooltip,
-  VStack,
-} from '@chakra-ui/react';
+import { Center, IconButton, Input, Square, Tooltip, VStack } from '@chakra-ui/react';
 
 export const Dropzone = ({
   onImageAdded,
@@ -36,8 +29,8 @@ export const Dropzone = ({
       hasArrow
       label={
         isProUser
-          ? 'Gambar produk yang dimasukkan sudah mencapai limit unggahan'
-          : 'Kamu hanya bisa mengunggah satu gambar per produk sebagai pengguna Akun Standar'
+          ? 'The product images limit reached'
+          : 'You can only upload one image per product as a Standard Account user.'
       }
       bg="gray.600"
       color="white"

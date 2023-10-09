@@ -1,21 +1,9 @@
 import { useCallback, useState } from 'react';
-import { HiOutlinePencil, HiOutlineTrash } from 'react-icons/hi';
+import { HiOutlinePencil } from 'react-icons/hi';
 
 import {
-  Button,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  HStack,
-  IconButton,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Link,
-  Stack,
-  Text,
-  useDisclosure,
-  VStack,
+    Button, FormControl, FormHelperText, FormLabel, HStack, IconButton, Input, InputGroup,
+    InputRightAddon, Link, Stack, Text, useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import { Destination } from '../../../../../models';
@@ -123,7 +111,7 @@ const LinkDestination = ({
               color="brand.red"
               fontSize={{ base: '14px', sm: '12px', md: '14px' }}
             >
-              Harap pastikan URL atau alamat link dimulai dengan 'http://' atau
+              Please ensure the URL or link address starts with 'http://' or
               'https://'
             </FormHelperText>
           )}
@@ -137,14 +125,14 @@ const LinkDestination = ({
             fontSize={{ base: '16px', sm: '12px', md: '16px' }}
           >
             <HStack spacing={2}>
-              <Text>Label Link</Text>
+              <Text>Link Label</Text>
               <Text
                 fontFamily="source"
                 fontSize="14px"
                 fontWeight="normal"
                 color="brand.black40"
               >
-                (Opsional)
+                (Optional)
               </Text>
             </HStack>
           </FormLabel>
@@ -224,7 +212,7 @@ const LinkDestination = ({
               aria-label="Simpan link"
               isDisabled={url?.length === 0 || !isUrlValid}
             >
-              Simpan
+              Save
             </Button>
             <Button
               onClick={onOpen}
@@ -233,9 +221,9 @@ const LinkDestination = ({
               size="md"
               _focus={{ outline: 'none' }}
               ml="4"
-              aria-label="Hapus link"
+              aria-label="Delete link"
             >
-              Hapus
+              Delete
             </Button>
           </HStack>
         )}
@@ -248,12 +236,12 @@ const LinkDestination = ({
           onClose();
           deleteLink();
         }}
-        title={'Apakah kamu yakin ingin menghapus link ini?'}
+        title={'Are you sure you want to delete this link?'}
         message={
-          'Link yang dihapus tidak dapat dikembalikan. Data analitik yang telah tercatat untuk link yang dihapus akan tetap tersimpan.'
+          'Deleted links cannot be restored. The analytics data recorded for the deleted link will remain.'
         }
-        confirmButtonLabel={'Hapus'}
-        cancelButtonLabel={'Batalkan'}
+        confirmButtonLabel={'Delete'}
+        cancelButtonLabel={'Cancel'}
       />
     </>
   );

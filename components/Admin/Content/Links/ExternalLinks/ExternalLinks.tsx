@@ -1,10 +1,4 @@
-import {
-  arrayRemove,
-  arrayUnion,
-  doc,
-  getDoc,
-  updateDoc,
-} from 'firebase/firestore';
+import { arrayRemove, arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
 import { Box, Button, Heading, HStack, Text, VStack } from '@chakra-ui/react';
@@ -153,8 +147,8 @@ const ExternalLinks = ({
     } catch (error) {
       onSaveEnd();
       showToast({
-        title: 'Gagal menyimpan link',
-        description: 'Harap mencoba kembali',
+        title: 'Failed to save link',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -223,8 +217,8 @@ const ExternalLinks = ({
     } catch (error) {
       onSaveEnd();
       showToast({
-        title: 'Gagal mengubah data link',
-        description: 'Harap mencoba kembali',
+        title: 'Failed to change link data',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -261,8 +255,8 @@ const ExternalLinks = ({
     } catch (error) {
       onSaveEnd();
       showToast({
-        title: 'Gagal menghapus link',
-        description: 'Harap mencoba kembali',
+        title: 'Failed to delete link',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -315,7 +309,7 @@ const ExternalLinks = ({
               fontWeight="semibold"
               fontSize={{ base: '24px', sm: '16px', md: '24px' }}
             >
-              Link External
+              External Link
             </Heading>
           </HStack>
         </HStack>
@@ -333,7 +327,7 @@ const ExternalLinks = ({
                 base: 'brand.red',
               }}
             >
-              Batalkan
+              Cancel
             </Button>
           )}
 
@@ -347,8 +341,8 @@ const ExternalLinks = ({
             display={{ base: 'flex', sm: 'none', md: 'flex' }}
           >
             {externalLinksPageMode === 'view'
-              ? 'Tambah link baru'
-              : 'Simpan link baru'}
+              ? 'Add new link'
+              : 'Save new link'}
           </Button>
 
           <Button
@@ -361,14 +355,14 @@ const ExternalLinks = ({
             onClick={onLinkActionButtonClicked}
             isDisabled={externalLinksPageMode === 'add' && !isLinkValid}
           >
-            {externalLinksPageMode === 'view' ? 'Tambah link baru' : 'Simpan'}
+            {externalLinksPageMode === 'view' ? 'Add new link' : 'Save'}
           </Button>
         </HStack>
       </HStack>
 
       {externalLinksPageMode === 'view' && externalLinks.length === 0 && (
         <Text fontFamily="source" fontWeight="normal" fontSize="14px">
-          Kamu belum memiliki link external.
+          You don't have external links yet.
         </Text>
       )}
 

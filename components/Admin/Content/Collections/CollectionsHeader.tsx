@@ -42,7 +42,7 @@ const CollectionsHeader = ({
             <Heading as="h4" fontFamily="poppins" fontWeight="semibold">
               <HStack>
                 <Text fontSize={{ base: '24px', sm: '16px', md: '24px' }}>
-                  Koleksi
+                  Collection
                 </Text>{' '}
                 <Text
                   color="brand.black40"
@@ -68,7 +68,7 @@ const CollectionsHeader = ({
               size="md"
               onClick={() => onManage?.()}
             >
-              Atur koleksi
+              Manage collections
             </Button>
             <Button
               fontFamily="poppins"
@@ -77,7 +77,7 @@ const CollectionsHeader = ({
               onClick={() => onAddNewCollection?.()}
               display={{ base: 'flex', sm: 'none', lg: 'flex' }}
             >
-              Tambah koleksi baru
+              Add a new collection
             </Button>
           </HStack>
         )}
@@ -94,7 +94,7 @@ const CollectionsHeader = ({
               onClick={() => onCancel?.()}
               display={{ base: 'flex', sm: 'none', lg: 'flex' }}
             >
-              Batalkan
+              Cancel
             </Button>
             {!isMobile && (
               <Button
@@ -103,7 +103,7 @@ const CollectionsHeader = ({
                 size="md"
                 onClick={() => onSave?.()}
               >
-                Simpan perubahan
+                Save changes
               </Button>
             )}
             {isMobile && (
@@ -118,7 +118,7 @@ const CollectionsHeader = ({
                 size="md"
                 onClick={() => onSave?.()}
               >
-                Simpan perubahan
+                Save changes
               </Button>
             )}
           </HStack>

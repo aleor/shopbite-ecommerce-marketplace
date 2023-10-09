@@ -9,11 +9,11 @@ const AdminContactVerificationBar = () => {
   return (
     <VerificationBar>
       <Text color="brand.error">
-        Untuk mempublikasikan toko Anda, Anda harus memasukkan kontak admin toko Anda agar pelanggan Anda dapat menghubungi Anda.
+        To publish your store, you must provide your shop admin contact so your customers can contact you.
       </Text>
 
       <Link color="brand.green" onClick={() => navigateTo('account')}>
-        Klik disini untuk atur kontak admin toko
+        Click here to set shop admin contact
       </Link>
     </VerificationBar>
   );

@@ -23,7 +23,7 @@ const OrdersDashboard = () => {
         w="100%"
       >
         <Text fontFamily="poppins" fontSize="24px" fontWeight="semibold">
-          Segera Hadir
+          Coming Soon
         </Text>
       </Box>
     </Box>

@@ -20,7 +20,7 @@ const SubscriptionSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Jenis Akun Shopbite
+            Shopbite Account Types
           </FormLabel>
 
           <Text
@@ -39,7 +39,7 @@ const SubscriptionSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Tanggal Akhir Status Premium
+            Premium Status End Date
           </FormLabel>
 
           <Text

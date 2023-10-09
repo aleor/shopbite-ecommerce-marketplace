@@ -18,17 +18,17 @@ const ActiveSubscriptionHeader = ({
           fontSize={{ base: '24px', sm: '16px', md: '24px' }}
         >
           <Text>
-            Saat ini Anda sedang menikmati manfaat dari
+            You are currently enjoying the benefits of
             <Text as="span" color="brand.green">
               {' '}
-              Akun Premium!
+              Premium Package!
             </Text>
           </Text>
         </Heading>
       </HStack>
       <Box>
         <Text fontFamily="poppins" fontSize="16px">
-          Manfaat Paket Premium yang dapat Anda nikmati:
+          Premium Package benefits that you can enjoy:
         </Text>
       </Box>
     </>

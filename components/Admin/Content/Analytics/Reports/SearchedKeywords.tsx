@@ -16,7 +16,7 @@ const SearchedKeywords = ({
         fontSize="20px"
         fontWeight="semibold"
       >
-        Kata Kunci Dicari
+        Searched Keywords
       </Heading>
 
       {searchResult?.length ? (
@@ -29,7 +29,7 @@ const SearchedKeywords = ({
         </Box>
       ) : (
         <Box w="100%" pt="4" color="brand.black40">
-          Tidak ada data tersedia untuk kurun waktu yang dipilih
+          No data available for the selected timeframe
         </Box>
       )}
     </VStack>

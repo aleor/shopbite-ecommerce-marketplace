@@ -3,19 +3,8 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 import { HiOutlinePencil } from 'react-icons/hi';
 
 import {
-  Button,
-  FormControl,
-  FormLabel,
-  HStack,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
-  Radio,
-  RadioGroup,
-  Text,
-  VStack,
+    Button, FormControl, FormLabel, HStack, IconButton, Input, InputGroup, InputLeftAddon,
+    InputRightAddon, Radio, RadioGroup, Text, VStack
 } from '@chakra-ui/react';
 
 import { db } from '../../../../../firebase/firestore';
@@ -77,9 +66,9 @@ const ShopSettings = () => {
       (contactType === AdminContactType.MAIL && !contactEmail?.length)
     ) {
       showToast({
-        title: 'Kontak admin toko wajib diisi',
+        title: 'Shop admin contact required',
         description:
-          'Harap mengisi kontak admin toko agar pelanggan Anda dapat menghubungi Anda',
+          'Please fill in the shop admin contact so that your customers can contact you',
         status: 'error',
       });
       return;
@@ -100,8 +89,8 @@ const ShopSettings = () => {
       });
 
       showToast({
-        title: 'Berhasil menyimpan pengaturan toko',
-        description: 'Perubahan pada toko Anda telah berhasil disimpan',
+        title: 'Shop settings saved successfully',
+        description: 'Changes saved successfully',
         status: 'success',
       });
 
@@ -110,8 +99,8 @@ const ShopSettings = () => {
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal menyimpan pengaturan toko',
-        description: 'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+        title: 'Failed to save shop settings',
+        description: 'An error occurred during save, please try again',
         status: 'error',
       });
     }
@@ -127,7 +116,7 @@ const ShopSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Kontak Admin Toko<sup>*</sup>
+            Shop Admin Contact<sup>*</sup>
           </FormLabel>
 
           <Text
@@ -146,7 +135,7 @@ const ShopSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Pesan Pembelian dari Pelanggan
+            Purchase Message from Customer
           </FormLabel>
 
           <Text
@@ -171,7 +160,7 @@ const ShopSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Kontak Admin Toko<sup>*</sup>
+            Shop Admin Contact<sup>*</sup>
           </FormLabel>
 
           <RadioGroup defaultValue={contactType} name="contactType" pt="2">
@@ -211,10 +200,10 @@ const ShopSettings = () => {
             <HStack>
               <Text>
                 {contactType === AdminContactType.WA
-                  ? 'Nomor Telepon Whatsapp'
+                  ? 'Whatsapp Phone Number'
                   : 'Email'}
               </Text>
-              <InfoButtonWithTooltip label="Pelanggan Anda akan diarahkan ke admin toko Anda setelah melakukan checkout pembelian" />
+              <InfoButtonWithTooltip label="Your customers will be redirected to your shop admin after checkout" />
             </HStack>
           </FormLabel>
 
@@ -248,7 +237,7 @@ const ShopSettings = () => {
                 setContactEmail(e.target.value);
               }}
               noOfLines={1}
-              placeholder="cth. contoh@gmail.com"
+              placeholder="e.g. contoh@gmail.com"
               lineHeight="14px"
               resize="none"
               _focus={{ outline: 'none' }}
@@ -268,16 +257,16 @@ const ShopSettings = () => {
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
             <HStack>
-              <Text>Pesan Pembelian dari Pelanggan</Text>
+              <Text>Purchase Message from Customer</Text>
               <Text
                 fontFamily="source"
                 fontWeight="normal"
                 color="brand.black40"
                 fontSize="14px"
               >
-                (Opsional)
+                (Optional)
               </Text>
-              <InfoButtonWithTooltip label="Ini adalah pesan yang akan dikirimkan pelanggan Anda ketika melakukan pembelian" />
+              <InfoButtonWithTooltip label="This is the message your customers will be sending when making a purchase" />
             </HStack>
           </FormLabel>
 
@@ -292,7 +281,7 @@ const ShopSettings = () => {
               maxLength={adminSettings.profile.maxContactCaptionLength}
               noOfLines={1}
               borderRight="none"
-              placeholder="cth. Halo, saya ingin memesan barang ini, apakah tersedia?"
+              placeholder="e.g. Hello, I would like to order this item, is it available?"
               lineHeight="14px"
               resize="none"
               _focus={{ outline: 'none' }}

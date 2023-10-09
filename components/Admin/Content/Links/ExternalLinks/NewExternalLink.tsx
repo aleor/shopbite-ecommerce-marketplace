@@ -2,17 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 
 import {
-  Button,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  HStack,
-  Icon,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Text,
-  useDisclosure,
+    Button, FormControl, FormHelperText, FormLabel, HStack, Icon, Input, InputGroup,
+    InputRightAddon, Text, useDisclosure
 } from '@chakra-ui/react';
 
 import { Link } from '../../../../../models';
@@ -84,7 +75,7 @@ const NewExternalLink = ({
     <>
       <HStack spacing="6">
         <Text fontFamily="poppins" fontWeight="semibold" fontSize="20px">
-          Destinasi Link
+          Link Destination
         </Text>
 
         {!linkType && (
@@ -96,7 +87,7 @@ const NewExternalLink = ({
             _focus={{ outline: 'none' }}
             onClick={onOpen}
           >
-            Pilih
+            Select
           </Button>
         )}
 
@@ -120,7 +111,7 @@ const NewExternalLink = ({
           fontSize="12px"
           color="brand.error"
         >
-          (wajib dipilih)
+          (must be selected)
         </Text>
       </HStack>
 
@@ -132,8 +123,8 @@ const NewExternalLink = ({
           color="brand.error"
         >
           {linkTypesExceeded
-            ? 'Kamu hanya bisa menambahkan hingga 10 jenis tujuan link yang berbeda'
-            : 'Kamu hanya bisa menambahkan 10 link dengan jenis tujuan yang sama'}
+            ? 'You can only add up to 10 different link destination types'
+            : 'You can only add 10 links with the same destination type'}
         </Text>
       )}
 
@@ -172,7 +163,7 @@ const NewExternalLink = ({
             color="brand.red"
             fontSize={{ base: '14px', sm: '12px', md: '14px' }}
           >
-            Harap pastikan URL atau alamat link dimulai dengan 'http://' atau
+            Please ensure the URL or link address starts with 'http://' or
             'https://'
           </FormHelperText>
         )}
@@ -186,14 +177,14 @@ const NewExternalLink = ({
           fontSize={{ base: '16px', sm: '12px', md: '16px' }}
         >
           <HStack spacing={2}>
-            <Text>Label Link</Text>
+            <Text>Link Label</Text>
             <Text
               fontFamily="source"
               fontSize="14px"
               fontWeight="normal"
               color="brand.black40"
             >
-              (Opsional)
+              (Optional)
             </Text>
           </HStack>
         </FormLabel>

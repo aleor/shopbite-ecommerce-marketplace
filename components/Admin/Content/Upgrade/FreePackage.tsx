@@ -1,11 +1,6 @@
 import { BsClipboardData, BsGlobe, BsSignpost, BsWifi } from 'react-icons/bs';
 
-import {
-  Box,
-  Button,
-  Stack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Stack, VStack } from '@chakra-ui/react';
 
 import BenefitCard from './BenefitCard';
 import UpgradePageHeader from './UpgradePageHeader';
@@ -23,11 +18,11 @@ const FreePackage = ({ onClose }: { onClose: () => void }) => {
           >
             <BenefitCard
               iconType={BsWifi}
-              text="Website dan sistem pengelolaan toko gratis hingga 30 jenis produk"
+              text="Free website and store management system for up to 30 types of products"
             />
             <BenefitCard
               iconType={BsSignpost}
-              text="Menghubungkan pelanggan Anda langsung kepada kontak admin toko Anda ketika melakukan pemesanan"
+              text="Connect your customers directly to your shop admin contact when placing an order"
             />
           </Stack>
           <Stack
@@ -37,11 +32,11 @@ const FreePackage = ({ onClose }: { onClose: () => void }) => {
           >
             <BenefitCard
               iconType={BsGlobe}
-              text="Tautan untuk link sosial media, e-commerce, delivery makanan online, dan link lainnya"
+              text="Links for social media links, e-commerce, online food delivery, and others"
             />
             <BenefitCard
               iconType={BsClipboardData}
-              text="Data analitik dari website dan perilaku pembeli hingga 7 hari kebelakang"
+              text="Shop analytic data invluding customer behavior up to 7 days back"
             />
           </Stack>
         </VStack>
@@ -49,7 +44,7 @@ const FreePackage = ({ onClose }: { onClose: () => void }) => {
 
       <VStack spacing="8" py="12" width="100%" alignItems="center">
         <Button width="328px" onClick={onClose}>
-          Lihat manfaat dari Akun Premium
+          See the benefits of a Premium Account
         </Button>
       </VStack>
     </VStack>

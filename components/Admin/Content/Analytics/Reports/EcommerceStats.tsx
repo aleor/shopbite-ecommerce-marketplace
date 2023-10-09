@@ -96,7 +96,7 @@ const EcommerceStats = ({
               ),
               datasets: [
                 {
-                  label: 'Kunjungan Toko',
+                  label: 'Shop Visits',
                   data: datasets.visits.map((v) => v.value),
                   borderColor: '#856C3F',
                   backgroundColor: '#856C3F',
@@ -105,7 +105,7 @@ const EcommerceStats = ({
                   pointHoverBorderColor: 'darkgray',
                 },
                 {
-                  label: 'Produk Dibuka',
+                  label: 'Product Views',
                   data: datasets.items.map((v) => v.value),
                   borderColor: '#518788',
                   backgroundColor: '#518788',
@@ -114,7 +114,7 @@ const EcommerceStats = ({
                   pointHoverBorderColor: 'darkgray',
                 },
                 {
-                  label: 'Jumlah Pesanan',
+                  label: 'Order Quantity',
                   data: datasets.orders.map((v) => v.value),
                   borderColor: '#CEA55A',
                   backgroundColor: '#CEA55A',
@@ -129,17 +129,17 @@ const EcommerceStats = ({
           <Box w="100%">
             <VStack w="100%">
               <ReportTextRow
-                label="Kunjungan Toko"
+                label="Shop Visits"
                 value={numberFormatter(shopAnalytics.totalCatalogVisits)}
               />
 
               <ReportTextRow
-                label="Produk Dibuka"
+                label="Product Views"
                 value={numberFormatter(shopAnalytics.totalItemsViewed)}
               />
 
               <ReportTextRow
-                label="Jumlah Pesanan"
+                label="Order Quantity"
                 value={numberFormatter(shopAnalytics.totalOrdersCreated)}
               />
             </VStack>
@@ -168,7 +168,7 @@ const EcommerceStats = ({
               ),
               datasets: [
                 {
-                  label: 'Total Transaksi Harian',
+                  label: 'Total Daily Transactions',
                   data: datasets.transactions.map((t) => t.value),
                   borderColor: '#856C3F',
                   backgroundColor: '#856C3F',
@@ -183,7 +183,7 @@ const EcommerceStats = ({
           <Box w="100%">
             <VStack w="100%">
               <ReportTextRow
-                label="Rata-rata Transaksi"
+                label="Average Transaction"
                 value={moneyValueFormatter(
                   shopAnalytics.averagePurchaseRevenue,
                   shop.currency
@@ -191,7 +191,7 @@ const EcommerceStats = ({
               />
 
               <ReportTextRow
-                label="Total Transaksi"
+                label="Total Transactions"
                 value={moneyValueFormatter(
                   shopAnalytics.totalPurchaseRevenue,
                   shop.currency

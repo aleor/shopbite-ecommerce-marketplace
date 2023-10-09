@@ -48,23 +48,23 @@ const GeneralSettings = () => {
       setMode('view');
       showToast({
         status: 'success',
-        title: 'Perubahan berhasil disimpan',
-        description: 'Perubahan data akun Anda berhasil disimpan',
+        title: 'Changes saved successfully',
+        description: 'Your account data changes were saved successfully',
       });
     } catch (error) {
       setIsSaving(false);
       showToast({
         status: 'error',
-        title: 'Perubahan gagal disimpan',
+        title: 'Unable to save changes',
         description:
-          'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+          'An error occurred during save, please try again',
       });
     }
   };
 
   return (
     <VStack spacing="6" alignItems="flex-start" w="100%">
-      <SectionHeader title="Pengaturan Akun">
+      <SectionHeader title="Account Settings">
         {mode === 'view' ? (
           <IconButton
             icon={<HiOutlinePencil size="20px" />}
@@ -87,9 +87,9 @@ const GeneralSettings = () => {
               display={{ base: 'flex', sm: 'none', md: 'flex' }}
               isDisabled={isSaving}
               isLoading={isSaving}
-              loadingText="Menyimpan..."
+              loadingText="Saving..."
             >
-              Simpan Perubahan
+             Save Changes
             </Button>
 
             <Button
@@ -106,10 +106,10 @@ const GeneralSettings = () => {
               isLoading={isSaving}
               _focus={{ outline: 'none' }}
               onClick={onSave}
-              loadingText="Menyimpan..."
+              loadingText="Saving..."
               display={{ base: 'none', sm: 'flex', md: 'none' }}
             >
-              Simpan Perubahan
+              Save Changes
             </Button>
           </>
         )}
@@ -122,7 +122,7 @@ const GeneralSettings = () => {
           fontWeight="semibold"
           fontSize={{ base: '16px', sm: '14px', md: '16px' }}
         >
-          Foto Profil
+          Profile image
         </FormLabel>
 
         <ProfilePhoto mode={mode} />
@@ -135,7 +135,7 @@ const GeneralSettings = () => {
           fontWeight="semibold"
           fontSize={{ base: '16px', sm: '14px', md: '16px' }}
         >
-          Nama Toko Tertampil
+          Displayed Shop Name
         </FormLabel>
         {mode === 'view' ? (
           <Text
@@ -157,7 +157,7 @@ const GeneralSettings = () => {
               maxLength={adminSettings.profile.maxNameLength}
               noOfLines={1}
               borderRight="none"
-              placeholder="cth. Toko Makmur"
+              placeholder="e.g. Toko Makmur"
               lineHeight="14px"
               resize="none"
               _focus={{ outline: 'none' }}
@@ -188,7 +188,7 @@ const GeneralSettings = () => {
           fontWeight="semibold"
           fontSize={{ base: '16px', sm: '14px', md: '16px' }}
         >
-          Deskripsi Toko
+          Shop Description
         </FormLabel>
         {mode === 'view' ? (
           <Text

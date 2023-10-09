@@ -7,11 +7,11 @@ import {
 
 export const destinations = [
   {
-    groupName: 'Link Custom',
+    groupName: 'Custom Links',
     destinations: [{ label: 'Any', value: LinkType.Any, icon: AnylinkIcon }],
   },
   {
-    groupName: 'Platform Komunikasi',
+    groupName: 'Communication Platform',
     destinations: [
       { label: 'WhatsApp', value: LinkType.Whatsapp, icon: WhatsappIcon },
       { label: 'Telegram', value: LinkType.Telegram, icon: TelegramIcon },
@@ -27,7 +27,7 @@ export const destinations = [
     ],
   },
   {
-    groupName: 'Pengantaran Makanan',
+    groupName: 'Food Delivery',
     destinations: [
       { label: 'GoFood', value: LinkType.GoFood, icon: GoFoodIcon },
       {
@@ -44,7 +44,7 @@ export const destinations = [
     ],
   },
   {
-    groupName: 'Media Sosial',
+    groupName: 'Social Media',
     destinations: [
       { label: 'Instagram', value: LinkType.Instagram, icon: InstagramIcon },
       { label: 'Facebook', value: LinkType.Facebook, icon: FacebookIcon },

@@ -4,22 +4,8 @@ import { useMemo, useState } from 'react';
 import { HiOutlineArrowLeft, HiSearch, HiX } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  HStack,
-  Icon,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
-  Link,
-  Text,
-  useBreakpointValue,
-  Wrap,
-  WrapItem,
+    Box, Button, Divider, Flex, HStack, Icon, IconButton, Input, InputGroup, InputLeftElement,
+    InputRightElement, Link, Text, useBreakpointValue, Wrap, WrapItem
 } from '@chakra-ui/react';
 
 import { db } from '../../../../firebase/firestore';
@@ -148,9 +134,9 @@ const EditCollection = ({
       console.error(error);
       setIsSaving(false);
       showToast({
-        title: 'Gagal menyimpan perubahan',
+        title: 'Failed to save changes',
         description:
-          'Terjadi kesalahan sistem dalam menyimpan data, harap mencoba kembali',
+          'An error occurred during save, please try again',
         status: 'error',
       });
     }
@@ -158,7 +144,7 @@ const EditCollection = ({
 
   return (
     <>
-      <SpinnerOverlay visible={isSaving} message="Menyimpan perubahan..." />
+      <SpinnerOverlay visible={isSaving} message="Saving changes..." />
       <Box pointerEvents={isSaving ? 'none' : 'all'}>
         <HStack justifyContent="space-between" pb="2">
           <HStack>
@@ -192,7 +178,7 @@ const EditCollection = ({
               fontFamily="poppins"
               fontSize="14px"
             >
-              Simpan perubahan
+              Save changes
             </Button>
           </Flex>
           )
@@ -207,13 +193,13 @@ const EditCollection = ({
               fontWeight="normal"
               color="brand.black40"
             >
-              Produk Tergabung
+              Merged Products
             </Text>
           </Box>
           <Box pt="2">
             {collectionItems.length === 0 ? (
               <Text fontFamily="source" color="brand.black70" fontSize="14px">
-                Belum ada produk yang dimasukkan
+                No products have been added yet
               </Text>
             ) : (
               <Wrap spacing="4">
@@ -240,7 +226,7 @@ const EditCollection = ({
             fontWeight="normal"
             color="brand.black40"
           >
-            Semua Produk
+            All Products
           </Text>
         </Box>
 
@@ -253,7 +239,7 @@ const EditCollection = ({
               <Icon as={HiSearch} color="brand.gray" boxSize="5" />
             </InputLeftElement>
             <Input
-              placeholder="Cari produk disini"
+              placeholder="Search products here"
               fontSize="md"
               lineHeight="14px"
               h="10"
@@ -279,9 +265,9 @@ const EditCollection = ({
         {items.length === 0 && (
           <HStack pt="4">
             <Text fontFamily="source" color="brand.black70" fontSize="14px">
-              Kamu belum menambahkan produk di tokomu. Silahkan{' '}
+            You haven't added products to your shop yet. Please{' '}
               <NextLink href={getLink('items')}>
-                <Link>tambah produk baru</Link>
+                <Link>add new products</Link>
               </NextLink>
             </Text>
           </HStack>
@@ -321,7 +307,7 @@ const EditCollection = ({
             onClick={saveChanges}
             justifyContent="center"
           >
-            Simpan
+            Save Changes
           </Button>
         </Box>
       )}

@@ -62,9 +62,9 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Foto profil gagal disimpan',
+        title: 'Profile image is not saved',
         description:
-          'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+          'An error occurred during save, please try again',
         status: 'error',
       });
     }
@@ -77,8 +77,8 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
   const onImageAdded = async (file: File) => {
     if (file?.size > adminSettings.profile.maxProfileImageSize) {
       showToast({
-        title: 'Ukuran file foto terlalu besar',
-        description: 'Ukuran file foto tidak boleh melebihi 2MB',
+        title: 'Photo file size is too large',
+        description: 'Photo file size should not exceed 2MB',
         status: 'error',
       });
       return;
@@ -169,7 +169,7 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
             _focus={{ outline: 'none' }}
             isDisabled={isSaving}
           >
-            Ganti Foto
+            Change Picture
           </Button>
           <Button
             variant="link"
@@ -178,7 +178,7 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
             _focus={{ outline: 'none' }}
             isDisabled={isSaving}
           >
-            Hapus Foto
+            Delete Picture
           </Button>
 
           {isSaving && (
@@ -199,10 +199,10 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
           onImageDelete();
           onClose();
         }}
-        title="Apakah Anda yakin ingin menghapus foto profil?"
-        message="Foto yang sudah dihapus tidak dapat dikembalikan"
-        confirmButtonLabel="Hapus"
-        cancelButtonLabel="Batalkan"
+        title="Are you sure you want to delete your profile picture?"
+        message="Photos that have been deleted cannot be restored"
+        confirmButtonLabel="Delete"
+        cancelButtonLabel="Cancel"
       />
     </HStack>
   );

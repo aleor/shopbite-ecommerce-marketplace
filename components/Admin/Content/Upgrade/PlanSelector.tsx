@@ -48,9 +48,9 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
       setLoading(false);
       showToast({
         status: 'error',
-        title: 'Gagal untuk berlangganan',
+        title: 'Failed to subscribe',
         description:
-          'Terjadi kesalahan dalam berlangganan, harap mencoba kembali',
+          'Subscription error occurred, please try again',
       });
       console.log(error);
     }
@@ -86,7 +86,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                     color="white"
                     fontFamily="poppins"
                   >
-                    Tahunan
+                    Annual
                   </Text>
                 </Box>
                 <Box bg="white" borderRadius="5px" px="8px" py="2px">
@@ -96,7 +96,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                     color="brand.error"
                     fontFamily="source"
                   >
-                    Paling Populer
+                    Most Popular
                   </Text>
                 </Box>
               </HStack>
@@ -108,7 +108,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   fontWeight="semibold"
                   fontSize="20px"
                 >
-                  IDR 468,000 (1 tahun)
+                  IDR 468,000 (1 year)
                 </Text>
                 <Text
                   fontFamily="poppins"
@@ -116,7 +116,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   fontSize="16px"
                   color="brand.error"
                 >
-                  Hemat 28%
+                  Save 28%
                 </Text>
                 <Text
                   fontFamily="source"
@@ -125,7 +125,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   width="190px"
                   align="center"
                 >
-                  Lebih hemat dengan biaya sekitar IDR 39,000 /bulan
+                  Save more with costs around IDR 39,000/month
                 </Text>
               </VStack>
             </Box>
@@ -155,7 +155,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   color="white"
                   fontFamily="poppins"
                 >
-                  Bulanan
+                  Monthly
                 </Text>
               </Box>
             </Box>
@@ -166,7 +166,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   fontWeight="semibold"
                   fontSize="20px"
                 >
-                  IDR 54,000 (1 bulan)
+                  IDR 54,000 (1 month)
                 </Text>
 
                 <Text
@@ -176,8 +176,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
                   width="190px"
                   align="center"
                 >
-                  Nikmati manfaat Akun Premium dan tingkatkan penjualan toko
-                  Anda
+                  Enjoy Premium Account benefits and boost your store sales
                 </Text>
               </VStack>
             </Box>
@@ -187,7 +186,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
             <HStack color="brand.error" fontSize="12px" pt="4" height="4">
               <Icon as={HiOutlineExclamationCircle} />
               <Text color="brand.error">
-                Harap memilih paket langganan terlebih dahulu
+                Please choose a subscription plan first
               </Text>
             </HStack>
           )}
@@ -199,7 +198,7 @@ const PlanSelector = ({ onClose }: { onClose: () => void }) => {
             loadingText="Memproses..."
             onClick={makePayment}
           >
-            Lanjut
+            Next
           </Button>
         </VStack>
       </VStack>

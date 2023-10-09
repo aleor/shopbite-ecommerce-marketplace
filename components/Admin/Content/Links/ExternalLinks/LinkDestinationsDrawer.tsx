@@ -111,7 +111,7 @@ const LinkDestinationsDrawer = ({
                 }}
                 isDisabled={!selectedDestination}
               >
-                Simpan
+                Save
               </Button>
             </Box>
           </VStack>
