@@ -217,7 +217,7 @@ const ItemPreview = ({ item }: { item: Item }) => {
                 dispatch(showModal(false));
               }}
             >
-              {`+ Cart - ${formatPrice(
+              {`Add to Cart: ${formatPrice(
                 getTotalCustomizedItemPrice({
                   item,
                   variant: selectedVariant,
