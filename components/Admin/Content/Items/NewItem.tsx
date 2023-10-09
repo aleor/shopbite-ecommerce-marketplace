@@ -5,29 +5,14 @@ import { useUploadFile } from 'react-firebase-hooks/storage';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Divider,
-  HStack,
-  IconButton,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useDisclosure,
-  VStack,
+    Box, Button, Divider, HStack, IconButton, Stack, Text, useBreakpointValue, useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import firebaseApp from '../../../../firebase/clientApp';
 import { db } from '../../../../firebase/firestore';
 import { useToast } from '../../../../libs/useToast';
 import {
-  Collection,
-  collectionConverter,
-  ItemAddOn,
-  ItemLink,
-  ItemStatus,
-  ItemUploadImage,
-  ItemVariant,
+    Collection, collectionConverter, ItemAddOn, ItemLink, ItemStatus, ItemUploadImage, ItemVariant
 } from '../../../../models';
 import { adminSettings } from '../../adminSettings';
 import ConfirmationModal from '../../ConfirmationModal';
@@ -101,8 +86,8 @@ const NewItem = ({
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal menyimpan produk',
-        description: 'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+        title: 'Failed to save the product',
+        description: 'An error occurred during save, please try again',
         status: 'error',
       });
       console.error(error);
@@ -185,7 +170,7 @@ const NewItem = ({
 
   return (
     <>
-      <SpinnerOverlay visible={isSaving} message="Saving item..." />
+      <SpinnerOverlay visible={isSaving} message="Saving product..." />
       <Box pointerEvents={isSaving ? 'none' : 'all'}>
         <Box>
           <HStack justifyContent="space-between">
@@ -204,7 +189,7 @@ const NewItem = ({
                 fontWeight="semibold"
                 fontSize={{ base: '24px', sm: '18px', md: '24px' }}
               >
-                Add item
+                Add product
               </Text>
             </HStack>
             <Box py="2" display={{ base: 'flex', sm: 'none', md: 'flex' }}>
@@ -216,7 +201,7 @@ const NewItem = ({
                 size="md"
                 isDisabled={!saveEnabled || isSaving}
               >
-                Simpan
+                Save
               </Button>
             </Box>
           </HStack>
@@ -361,7 +346,7 @@ const NewItem = ({
             onClick={onSave}
             width="100%"
           >
-            <Text color="white">Simpan</Text>
+            <Text color="white">Save</Text>
           </Button>
         </Box>
       )}
@@ -373,10 +358,10 @@ const NewItem = ({
           onGoBackWithoutChangesModalClose();
           onClose();
         }}
-        title="Apakah kamu yakin ingin kembali tanpa menyimpan perubahan?"
-        message="Perubahan yang tidak disimpan akan hilang"
-        confirmButtonLabel="Iya"
-        cancelButtonLabel="Lanjut edit"
+        title="Are you sure you want to go back without saving the changes?"
+        message="Unsaved changes will be lost"
+        confirmButtonLabel="Leave"
+        cancelButtonLabel="Cancel"
       />
     </>
   );

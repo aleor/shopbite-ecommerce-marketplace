@@ -32,13 +32,13 @@ const ManagementSettings = () => {
       setIsSaving(false);
       showToast({
         status: 'success',
-        title: 'Your store status was successfully changed',
+        title: 'Your shop status was successfully changed',
       });
     } catch (error) {
       setIsSaving(false);
       showToast({
         status: 'error',
-        title: 'Your store status was not updated',
+        title: 'Your shop status was not updated',
         description: 'An error occurred during save, please try again',
       });
     }

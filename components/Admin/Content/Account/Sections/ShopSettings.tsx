@@ -135,7 +135,7 @@ const ShopSettings = () => {
             fontWeight="semibold"
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
-            Purchase Message from Customer
+            Contact Caption
           </FormLabel>
 
           <Text
@@ -257,7 +257,7 @@ const ShopSettings = () => {
             fontSize={{ base: '16px', sm: '14px', md: '16px' }}
           >
             <HStack>
-              <Text>Purchase Message from Customer</Text>
+              <Text>Default Purchase Message from Customer</Text>
               <Text
                 fontFamily="source"
                 fontWeight="normal"
@@ -316,7 +316,7 @@ const ShopSettings = () => {
             onClick={() => {
               setMode('edit');
             }}
-            aria-label="Ubah Pengaturan Toko"
+            aria-label="Change Shop Settings"
             variant="ghost"
             color="brand.green"
             _focus={{ outline: 'none' }}
@@ -332,9 +332,9 @@ const ShopSettings = () => {
               display={{ base: 'flex', sm: 'none', md: 'flex' }}
               isDisabled={isSaving}
               isLoading={isSaving}
-              loadingText="Menyimpan..."
+              loadingText="Saving..."
             >
-              Simpan Perubahan
+              Save Changes
             </Button>
 
             <Button
@@ -349,12 +349,12 @@ const ShopSettings = () => {
               height="1.5"
               isDisabled={isSaving}
               isLoading={isSaving}
-              loadingText="Menyimpan..."
+              loadingText="Saving..."
               _focus={{ outline: 'none' }}
               onClick={onSave}
               display={{ base: 'none', sm: 'flex', md: 'none' }}
             >
-              Simpan Perubahan
+              Save Changes
             </Button>
           </>
         )}

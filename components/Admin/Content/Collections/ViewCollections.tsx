@@ -45,14 +45,14 @@ const ViewCollections = ({
           fontFamily="poppins"
           color="brand.black70"
         >
-          Kamu belum memiliki koleksi produk.
+          You don't have any collections yet.
         </Text>
         <Button
           fontFamily="poppins"
           minWidth="280px"
           onClick={onCreateCollection}
         >
-          Buat koleksi pertamaku
+          Create my first collection
         </Button>
       </VStack>
     );
@@ -72,7 +72,7 @@ const ViewCollections = ({
           mb="4"
           display={{ base: 'none', sm: 'flex', md: 'none' }}
         >
-          Tambah koleksi baru
+          Add a new collection
         </Button>
       )}
       <CollectionsHeader
@@ -87,7 +87,7 @@ const ViewCollections = ({
             <Icon as={HiSearch} color="brand.gray" boxSize="5" />
           </InputLeftElement>
           <Input
-            placeholder="Cari koleksi disini"
+            placeholder="Search collection"
             fontSize="xs"
             lineHeight="12px"
             h="10"

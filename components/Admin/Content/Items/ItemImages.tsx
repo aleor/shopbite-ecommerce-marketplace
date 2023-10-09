@@ -2,15 +2,7 @@ import { useState } from 'react';
 import { HiMinusCircle } from 'react-icons/hi';
 
 import {
-  Box,
-  FormControl,
-  IconButton,
-  Image,
-  Skeleton,
-  Text,
-  VStack,
-  Wrap,
-  WrapItem,
+    Box, FormControl, IconButton, Image, Skeleton, Text, VStack, Wrap, WrapItem
 } from '@chakra-ui/react';
 
 import { useToast } from '../../../../libs/useToast';
@@ -44,8 +36,8 @@ const ItemImages = ({
   const onImageAdded = (file: File) => {
     if (file?.size > adminSettings.item.maxImageSize) {
       showToast({
-        title: 'Ukuran file gambar terlalu besar',
-        description: 'Ukuran file gambar tidak boleh melebihi 2MB',
+        title: 'Image size is too large',
+        description: 'Image file size should not exceed 2MB',
         status: 'error',
       });
       return;
@@ -128,14 +120,14 @@ const ItemImages = ({
         fontWeight="semibold"
         fontSize={{ base: '16px', sm: '14px', md: '16px' }}
       >
-        Gambar Produk
+        Product Images
       </Text>
 
       {!hasActiveSubscription && (
         <Box maxWidth="fit-content">
           <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-            Upgrade akun kamu dengan Paket Premium dan nikmati keunggulan mengupload
-            lebih dari satu gambar produk
+            Upgrade your account with the Premium Package and enjoy the benefits of uploading
+            more than one product image
           </Text>
         </Box>
       )}

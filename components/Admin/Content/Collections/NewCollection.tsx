@@ -1,36 +1,14 @@
 import {
-  addDoc,
-  collection,
-  doc,
-  DocumentData,
-  DocumentReference,
-  getDoc,
-  updateDoc,
+    addDoc, collection, doc, DocumentData, DocumentReference, getDoc, updateDoc
 } from 'firebase/firestore';
 import NextLink from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { HiOutlineArrowLeft, HiSearch, HiX } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Divider,
-  FormControl,
-  FormLabel,
-  HStack,
-  Icon,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightAddon,
-  InputRightElement,
-  Link,
-  Text,
-  useBreakpointValue,
-  useDisclosure,
-  Wrap,
-  WrapItem,
+    Box, Button, Divider, FormControl, FormLabel, HStack, Icon, IconButton, Input, InputGroup,
+    InputLeftElement, InputRightAddon, InputRightElement, Link, Text, useBreakpointValue,
+    useDisclosure, Wrap, WrapItem
 } from '@chakra-ui/react';
 
 import { db } from '../../../../firebase/firestore';
@@ -201,7 +179,7 @@ const NewCollection = ({
                 fontWeight="semibold"
                 fontSize={{ base: '24px', sm: '16px', md: '24px' }}
               >
-                Tambah Koleksi Baru
+                Add New Collection
               </Text>
             </HStack>
             <Box py="2" display={{ base: 'flex', sm: 'none', md: 'flex' }}>
@@ -213,7 +191,7 @@ const NewCollection = ({
                 size="md"
                 isDisabled={!saveEnabled || isSaving}
               >
-                Simpan
+                Save
               </Button>
             </Box>
           </HStack>
@@ -230,7 +208,7 @@ const NewCollection = ({
                 fontWeight="semibold"
                 fontSize={{ base: '16px', sm: '12px', md: '16px' }}
               >
-                Nama Koleksi<sup>*</sup>
+                Collection Title<sup>*</sup>
               </FormLabel>
               <InputGroup>
                 <Input
@@ -266,7 +244,7 @@ const NewCollection = ({
                   fontWeight="normal"
                   color="brand.black40"
                 >
-                  Produk Tergabung
+                  Included Products
                 </Text>
               </Box>
               <Box pt="2" maxWidth={{ base: '75%', sm: '100%', lg: '75%' }}>
@@ -276,7 +254,7 @@ const NewCollection = ({
                     color="brand.black70"
                     fontSize="14px"
                   >
-                    Belum ada produk yang dimasukkan
+                    No products added yet
                   </Text>
                 ) : (
                   <Wrap spacing="4">
@@ -303,7 +281,7 @@ const NewCollection = ({
                 fontWeight="normal"
                 color="brand.black40"
               >
-                Semua Produk
+                All Products
               </Text>
             </Box>
 
@@ -342,9 +320,9 @@ const NewCollection = ({
             {allItems.length === 0 && (
               <HStack pt="4">
                 <Text fontFamily="source" color="brand.black70" fontSize="14px">
-                  Kamu belum menambahkan produk di tokomu. Silahkan{' '}
+                  You haven't added products to your shop yet. Please{' '}
                   <NextLink href={getLink('items')}>
-                    <Link>tambah produk baru</Link>
+                    <Link>add new product here</Link>
                   </NextLink>
                 </Text>
               </HStack>
@@ -386,7 +364,7 @@ const NewCollection = ({
             isDisabled={!saveEnabled || isSaving}
             onClick={onSave}
           >
-            <Text color="white">Simpan</Text>
+            <Text color="white">Save</Text>
           </Button>
         </Box>
       )}
@@ -398,10 +376,10 @@ const NewCollection = ({
           save();
           onEmptyCollectionModalClose();
         }}
-        title="Apakah kamu yakin ingin membuat koleksi kosong?"
-        message="Hanya koleksi yang tidak kosong yang akan ditampilkan di halaman etalase toko"
-        confirmButtonLabel="Lanjut"
-        cancelButtonLabel="Kembali"
+        title="Are you sure you want to create an empty collection?"
+        message="Only collections that are not empty will be displayed on the storefront page"
+        confirmButtonLabel="Continue"
+        cancelButtonLabel="Back"
       />
 
       <ConfirmationModal
@@ -411,10 +389,10 @@ const NewCollection = ({
           onGoBackWithoutChangesModalClose();
           onClose();
         }}
-        title="Apakah kamu yakin ingin keluar tanpa menyimpan perubahan?"
-        message="Perubahan yang tidak tersimpan akan hilang"
-        confirmButtonLabel="Iya"
-        cancelButtonLabel="Lanjut edit"
+        title="Are you sure you want to leave without saving changes?"
+        message="Unsaved changes will be lost"
+        confirmButtonLabel="Leave"
+        cancelButtonLabel="Cancel"
       />
     </>
   );

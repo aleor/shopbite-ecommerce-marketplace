@@ -44,7 +44,7 @@ const Items = ({
 
   const onSave = () => {
     showToast({
-      title: 'Perubahan berhasil disimpan',
+      title: 'Changes saved successfully',
       status: 'success',
     });
   };

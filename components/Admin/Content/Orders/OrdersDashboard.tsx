@@ -7,7 +7,7 @@ const OrdersDashboard = () => {
     <Box py="20" display="flex" justifyContent="center" position="relative">
       <Image
         src="/images/order_list_preview.png"
-        alt="Segera Hadir"
+        alt="Coming Soon"
         objectFit="contain"
         width={1080}
         height={610}

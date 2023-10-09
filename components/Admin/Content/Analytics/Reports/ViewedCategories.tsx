@@ -16,7 +16,7 @@ const ViewedCategories = ({
         fontSize="20px"
         fontWeight="semibold"
       >
-        Product Collection Analytics
+        Collection Analytics
       </Heading>
 
       {collectionResult?.length ? (

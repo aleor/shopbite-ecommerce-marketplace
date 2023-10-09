@@ -16,7 +16,7 @@ const ItemAnalytics = ({
   item: ItemAnalyticsResult;
   shop: Shop;
 }) => {
-  const [itemData, loading, error] = useDocumentDataOnce<Item>(
+  const [itemData] = useDocumentDataOnce<Item>(
     shop &&
       item &&
       doc(db, `shops/${shop.id}/items/${item.itemId}`).withConverter(

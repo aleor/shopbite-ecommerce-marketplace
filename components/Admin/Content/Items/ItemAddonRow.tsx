@@ -35,7 +35,7 @@ const ItemAddonRow = ({
 
       <IconButton
         icon={<HiOutlineTrash size="16px" />}
-        aria-label="Hapus link"
+        aria-label="Delete addon"
         variant="ghost"
         color="brand.red"
         _focus={{ outline: 'none' }}

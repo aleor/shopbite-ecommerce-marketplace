@@ -13,16 +13,16 @@ type SortingOptions = {
 };
 
 const sortingOptions: SortingOptions[] = [
-  { label: 'Nama (A -> Z)', value: 'nameAsc' },
-  { label: 'Nama (Z -> A)', value: 'nameDesc' },
-  { label: 'Harga terendah', value: 'priceAsc' },
-  { label: 'Harga tertinggi', value: 'priceDesc' },
+  { label: 'Name (A -> Z)', value: 'nameAsc' },
+  { label: 'Name (Z -> A)', value: 'nameDesc' },
+  { label: 'Price: low to high', value: 'priceAsc' },
+  { label: 'Price: high to low', value: 'priceDesc' },
 ];
 
 const statusFilteringOptions: { label: string; value: ItemStatus }[] = [
-  { label: 'Tersedia', value: ItemStatus.available },
-  { label: 'Tidak tersedia', value: ItemStatus.disabled },
-  { label: 'Tersembunyi', value: ItemStatus.hidden },
+  { label: 'Available', value: ItemStatus.available },
+  { label: 'Not available', value: ItemStatus.disabled },
+  { label: 'Hidden', value: ItemStatus.hidden },
 ];
 
 const formatPrice = (value: number) => {
@@ -91,7 +91,7 @@ const ItemsFilter = ({
           >
             <VStack alignItems="flex-start" spacing="4">
               <Text fontSize="16px" fontFamily="poppins" fontWeight="medium">
-                Urut berdasarkan:
+                Sort by:
               </Text>
 
               <RadioGroup
@@ -116,12 +116,12 @@ const ItemsFilter = ({
             </VStack>
             <VStack alignItems="flex-start" spacing="4">
               <Text fontSize="16px" fontFamily="poppins" fontWeight="medium">
-                Saring berdasarkan:
+                Filter by:
               </Text>
 
               <Stack spacing="3">
                 <Text fontFamily="poppins" fontSize="12px" fontWeight="medium">
-                  Batas harga produk
+                  Product price range
                 </Text>
 
                 <HStack spacing="2">
@@ -165,7 +165,7 @@ const ItemsFilter = ({
 
               <Stack spacing="3" pt="3">
                 <Text fontFamily="poppins" fontSize="12px" fontWeight="medium">
-                  Status produk
+                  Product status
                 </Text>
                 <CheckboxGroup
                   value={statuses}
@@ -213,7 +213,7 @@ const ItemsFilter = ({
                 });
               }}
             >
-              Terapkan
+              Add
             </Button>
           </Box>
         </DrawerContent>

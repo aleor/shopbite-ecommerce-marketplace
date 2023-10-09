@@ -3,21 +3,8 @@ import { useCallback, useEffect, useState } from 'react';
 import { HiOutlinePencil, HiOutlineTrash } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Heading,
-  HStack,
-  IconButton,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Link,
-  Text,
-  useDisclosure,
-  VStack,
+    Box, Button, FormControl, FormHelperText, FormLabel, Heading, HStack, IconButton, Input,
+    InputGroup, InputRightAddon, Link, Text, useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import { db } from '../../../../../firebase/firestore';
@@ -83,8 +70,8 @@ const BioLinks = ({
     } catch (error) {
       onSaveEnd();
       showToast({
-        title: 'Gagal menyimpan link',
-        description: 'Harap mencoba kembali',
+        title: 'Unable to save link',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -113,8 +100,8 @@ const BioLinks = ({
     } catch (error) {
       onSaveEnd();
       showToast({
-        title: 'Gagal menghapus link',
-        description: 'Harap mencoba kembali',
+        title: 'Unable to save link',
+        description: 'Please try again',
         status: 'error',
       });
       console.error(error);
@@ -163,7 +150,7 @@ const BioLinks = ({
               setIsUrlValid(urlIsAllowed(e.target.value));
             }}
             noOfLines={2}
-            placeholder="cth. https://www.example.com"
+            placeholder="e.g. https://www.example.com"
             lineHeight="14px"
             resize="none"
             _focus={{ outline: 'none' }}
@@ -177,7 +164,7 @@ const BioLinks = ({
               color="brand.red"
               fontSize={{ base: '14px', sm: '12px', md: '14px' }}
             >
-              Harap pastikan URL atau alamat link dimulai dengan 'http://' atau
+              Please ensure the URL or link address starts with 'http://' or
               'https://'
             </FormHelperText>
           )}
@@ -191,14 +178,14 @@ const BioLinks = ({
             fontSize={{ base: '16px', sm: '12px', md: '16px' }}
           >
             <HStack spacing={2}>
-              <Text>Label Link</Text>
+              <Text>Link Label</Text>
               <Text
                 fontFamily="source"
                 fontSize="14px"
                 fontWeight="normal"
                 color="brand.black40"
               >
-                (Opsional)
+                (Optional)
               </Text>
             </HStack>
           </FormLabel>
@@ -292,7 +279,7 @@ const BioLinks = ({
                 fontWeight="normal"
                 color="brand.black40"
               >
-                Akan ditampilkan dibawah deskripsi toko
+                Will be displayed below the shop description
               </Text>
             </HStack>
           </HStack>
@@ -309,7 +296,7 @@ const BioLinks = ({
                   _focus={{ outline: 'none' }}
                   onClick={onOpen}
                 >
-                  Hapus link
+                  Delete Link
                 </Button>
 
                 <IconButton
@@ -361,12 +348,12 @@ const BioLinks = ({
           onClose();
           onDelete();
         }}
-        title={'Apakah kamu yakin ingin menghapus link ini?'}
+        title={'Are you sure you want to delete this link?'}
         message={
-          'Link yang dihapus tidak dapat dikembalikan. Data analitik yang telah tercatat untuk link yang dihapus akan tetap tersimpan.'
+          'Deleted links cannot be restored. The analytics data recorded for the deleted link will remain intact.'
         }
-        confirmButtonLabel={'Hapus'}
-        cancelButtonLabel={'Batalkan'}
+        confirmButtonLabel={'Delete'}
+        cancelButtonLabel={'Cancel'}
       />
     </>
   );

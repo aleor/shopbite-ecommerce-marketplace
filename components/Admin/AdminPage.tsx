@@ -3,7 +3,7 @@ import { getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { doc } from 'firebase/firestore';
 import { getFunctions, httpsCallable } from 'firebase/functions';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 
@@ -31,7 +31,7 @@ const AdminPage = () => {
   );
 
   const [sendEmailVerification] = useSendEmailVerification(auth);
-  const [emailVerified, setEmailVerified] = useState(
+  const [_, setEmailVerified] = useState(
     user?.emailVerified ?? false
   );
 
@@ -74,7 +74,7 @@ const AdminPage = () => {
     return (
       <Center pt="10">
         <Text>
-          An error occurred in the attempt to retrieve shop information{' '}
+          An error occurred during attempt to retrieve shop information{' '}
           {error ? `(${error})` : null}
         </Text>
       </Center>

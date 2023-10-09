@@ -31,14 +31,14 @@ const CollectionsSelector = ({
         fontWeight="semibold"
         fontSize={{ base: '16px', sm: '14px', md: '16px' }}
       >
-        Koleksi
+        Collection
       </Text>
 
       <Box maxWidth="fit-content">
         <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-          Kamu bisa memasukkan sebuah produk kedalam beberapa koleksi. Secara
-          default semua produk di toko kamu akan ditampilkan kembali di koleksi
-          dengan nama "Semua Produk".
+          You can put a product into multiple collections. By
+          default all products in your shop will be displayed in the
+          "All Products" collection.
         </Text>
       </Box>
 

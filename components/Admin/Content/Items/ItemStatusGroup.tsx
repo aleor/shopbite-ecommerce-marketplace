@@ -1,26 +1,17 @@
-import {
-  Box,
-  HStack,
-  Radio,
-  RadioGroup,
-  Stack,
-  Text,
-  Tooltip,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, HStack, Radio, RadioGroup, Stack, Text, Tooltip, VStack } from '@chakra-ui/react';
 
 import { ItemStatus } from '../../../../models';
 
 const productStatuses: { label: string; value: string; hint?: string }[] = [
-  { label: 'Tersedia', value: ItemStatus.available },
+  { label: 'Available', value: ItemStatus.available },
   {
-    label: 'Tidak tersedia',
-    hint: '(Akan ditampilkan di etalase tetapi tidak dapat dibeli pelanggan)',
+    label: 'Not available',
+    hint: '(Will be displayed on the storefront but cannot be purchased by customers)',
     value: ItemStatus.disabled,
   },
   {
-    label: 'Tersembunyi',
-    hint: '(Tidak ditampilkan di etalase)',
+    label: 'Hidden',
+    hint: '(Not shown in the storefront)',
     value: ItemStatus.hidden,
   },
 ];
@@ -48,7 +39,7 @@ const ItemStatusGroup = ({
 
       <Box maxWidth="fit-content">
         <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-          Status akan mempengaruhi apakah produk ini akan ditampilkan dan dapat dipesan.
+          The status will affect whether this product will be displayed and can be ordered.
         </Text>
       </Box>
 
@@ -71,7 +62,7 @@ const ItemStatusGroup = ({
               isDisabled={disabledStatuses?.includes(status.value)}
             >
               <Tooltip
-                label={`Anda telah mencapai batas limit jumlah produk. Upgrade dengan Paket Premium untuk menambah jumlah produk hingga tidak terbatas`}
+                label={`You have reached the limit on the number of products. Upgrade to the Premium Package to increase the number of products to unlimited.`}
                 bg="gray.600"
                 color="white"
                 hasArrow

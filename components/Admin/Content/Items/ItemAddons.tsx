@@ -2,22 +2,8 @@ import { useState } from 'react';
 import { v4 } from 'uuid';
 
 import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  HStack,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalOverlay,
-  Text,
-  useDisclosure,
-  VStack,
+    Box, Button, FormControl, FormLabel, HStack, Input, InputGroup, InputRightAddon, Modal,
+    ModalBody, ModalContent, ModalFooter, ModalOverlay, Text, useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import { ItemAddOn } from '../../../../models';
@@ -90,18 +76,18 @@ const ItemAddOns = ({
       <VStack w="100%" alignItems="flex-start" spacing="4">
         <HStack fontSize={{ base: '16px', sm: '14px', md: '16px' }} spacing="4">
           <Text fontFamily="poppins" fontWeight="semibold">
-            Tambahan (Add-ons)
+            Additional products (Add-ons)
           </Text>
 
           <Text fontFamily="source" fontWeight="normal" color="brand.black40">
-            (Opsional)
+            (Optional)
           </Text>
         </HStack>
 
         <Box maxWidth="fit-content">
           <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-            Kamu bisa menambahkan beberapa produk tambahan seperti topping,
-            kartu ucapan, paper bag, dan lainnya.
+            You can add some additional products such as toppings,
+            greeting cards, paper bags, and more.
           </Text>
         </Box>
 
@@ -116,7 +102,7 @@ const ItemAddOns = ({
           <>
             <FormControl>
               <FormLabel htmlFor="url" fontFamily="poppins" fontSize="12px">
-                Nama produk tambahan
+                Add-on title
               </FormLabel>
               <InputGroup size="md">
                 <Input
@@ -153,11 +139,11 @@ const ItemAddOns = ({
 
             <FormControl>
               <FormLabel htmlFor="price" fontFamily="poppins" fontSize="12px">
-                Harga
+                Price
               </FormLabel>
               <ItemPriceField
                 price={price}
-                placeholder="Kosongkan bila produk tambahan ini gratis"
+                placeholder="Leave blank if this add-on product is free"
                 onChange={setPrice}
               />
             </FormControl>
@@ -169,7 +155,7 @@ const ItemAddOns = ({
               size="md"
               alignSelf="flex-end"
             >
-              Simpan
+              Save
             </Button>
           </>
         )}
@@ -188,8 +174,8 @@ const ItemAddOns = ({
               textAlign="center"
             >
               {error === 'missing_data'
-                ? 'Pastikan Kamu sudah mengisi nama produk tambahan'
-                : 'Produk ini sudah memiliki produk tambahan dengan nama yang sama, nama setiap produk tambahan harus berbeda'}
+                ? 'Make sure you have filled in the add-on product name'
+                : 'This product already has add-ons with the same name, the name of each additional product must be different'}
             </Text>
           </ModalBody>
           <ModalFooter>
@@ -202,7 +188,7 @@ const ItemAddOns = ({
               onClick={onClose}
             >
               <Text fontFamily="poppins" fontSize="14px" color="white">
-                Oke
+                OK
               </Text>
             </Button>
           </ModalFooter>

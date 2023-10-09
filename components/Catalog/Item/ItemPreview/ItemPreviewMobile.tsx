@@ -1,15 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { HiX } from 'react-icons/hi';
 
-import {
-  Box,
-  Button,
-  Heading,
-  HStack,
-  IconButton,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Heading, HStack, IconButton, Text, VStack } from '@chakra-ui/react';
 
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
 import { addToCart } from '../../../../features/cart/cart-slice';
@@ -18,12 +10,7 @@ import { formatPrice } from '../../../../libs/formatPrice';
 import { getShopItemLink } from '../../../../libs/getLinks';
 import { parseJSONSafely } from '../../../../libs/parseJSONSafely';
 import {
-  getPriceRange,
-  getTotalCustomizedItemPrice,
-  Item,
-  ItemAddOn,
-  ItemStatus,
-  ItemVariant,
+    getPriceRange, getTotalCustomizedItemPrice, Item, ItemAddOn, ItemStatus, ItemVariant
 } from '../../../../models';
 import ShareButton from '../../../ShareButton/ShareButton';
 import Price from '../Price';
@@ -109,7 +96,7 @@ const StickyFooter = ({
               dispatch(showModal(false));
             }}
           >
-            {`${'Tambah ke Keranjang'} - ${formatPrice(
+            {`${'Add to Cart'} - ${formatPrice(
               getTotalCustomizedItemPrice({ item, variant, addOns, quantity })
             )}`}
           </Button>

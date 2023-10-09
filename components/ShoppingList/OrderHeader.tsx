@@ -14,7 +14,7 @@ const OrderHeader = ({ order, shop }: { order: Order; shop: Shop }) => {
   const renderOrderId = useCallback(() => {
     return (
       <>
-        <Text whiteSpace="nowrap">Nomor Pesanan</Text>
+        <Text whiteSpace="nowrap">Order Number</Text>
         <Text
           color="brand.black70"
           noOfLines={1}

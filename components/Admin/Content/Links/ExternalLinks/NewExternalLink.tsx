@@ -148,7 +148,7 @@ const NewExternalLink = ({
               setIsUrlValid(urlIsAllowed(e.target.value));
             }}
             noOfLines={2}
-            placeholder="cth. https://www.example.com"
+            placeholder="e.g. https://www.example.com"
             lineHeight="14px"
             resize="none"
             _focus={{ outline: 'none' }}
@@ -200,7 +200,7 @@ const NewExternalLink = ({
             lineHeight="14px"
             resize="none"
             borderRight="none"
-            placeholder="cth. Website Kami"
+            placeholder="e.g. Website Kami"
             _focus={{ outline: 'none' }}
             _hover={{ borderColor: 'inherit' }}
           />

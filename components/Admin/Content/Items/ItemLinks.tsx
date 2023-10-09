@@ -87,12 +87,12 @@ const ItemLinks = ({
         fontWeight="semibold"
         fontSize={{ base: '16px', sm: '14px', md: '16px' }}
       >
-        Link Pembelian External
+        External Purchase Link
       </Text>
 
       <Box maxWidth="fit-content">
         <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-          Anda bisa menambahkan beberapa link pembelian external sehingga pelanggan Anda dapat membeli juga melalui link tersebut
+          You can add some external purchase links so that your customers can buy via those different channels too
         </Text>
       </Box>
 
@@ -119,7 +119,7 @@ const ItemLinks = ({
 
       <FormControl>
         <FormLabel htmlFor="url" fontFamily="poppins" fontSize="12px">
-          Alamat link
+          Link address
         </FormLabel>
         <Input
           id="url"
@@ -139,14 +139,14 @@ const ItemLinks = ({
         />
         {validationError === 'url' && (
           <FormHelperText color="brand.red" fontSize="12px">
-            Harap pastikan URL atau alamat link dimulai dengan 'http://' atau
+            Please ensure the URL or link address starts with 'http://' or
             'https://'
           </FormHelperText>
         )}
         {validationError === 'type' && (
           <HStack color="brand.error" fontSize="12px" pt="4" height="4">
             <Icon as={HiOutlineExclamationCircle} />
-            <Text color="brand.error">Harap memilih tujuan link terlebih dahulu</Text>
+            <Text color="brand.error">Please select a link destination first</Text>
           </HStack>
         )}
       </FormControl>
@@ -155,7 +155,7 @@ const ItemLinks = ({
 
       <Box w="100%" display="flex" justifyContent="flex-end">
         <Button fontFamily="poppins" w="200px" size="md" onClick={onLinkAdd}>
-          Tambahkan
+          Add
         </Button>
       </Box>
     </VStack>

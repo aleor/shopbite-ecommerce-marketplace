@@ -133,7 +133,7 @@ const ShoppingCartItem = ({
 
             <IconButton
               icon={<HiOutlineTrash size="18px" />}
-              aria-label="Remove item"
+              aria-label="Remove product"
               variant="ghost"
               color="brand.green"
               disabled={disabled}

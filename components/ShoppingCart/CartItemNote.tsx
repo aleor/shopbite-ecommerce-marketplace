@@ -27,7 +27,7 @@ const CartItemNote = ({
           onChange={(e) => setValue(e.target.value)}
           _focus={{ outline: 'none' }}
           _hover={{ borderColor: 'inherit' }}
-          placeholder="Add a note..."
+          placeholder="Add a note"
           fontSize="12px"
           size="sm"
           autoFocus

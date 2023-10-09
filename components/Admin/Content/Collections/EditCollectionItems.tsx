@@ -193,7 +193,7 @@ const EditCollection = ({
               fontWeight="normal"
               color="brand.black40"
             >
-              Merged Products
+              All Products
             </Text>
           </Box>
           <Box pt="2">
@@ -239,7 +239,7 @@ const EditCollection = ({
               <Icon as={HiSearch} color="brand.gray" boxSize="5" />
             </InputLeftElement>
             <Input
-              placeholder="Search products here"
+              placeholder="Search products"
               fontSize="md"
               lineHeight="14px"
               h="10"
@@ -267,7 +267,7 @@ const EditCollection = ({
             <Text fontFamily="source" color="brand.black70" fontSize="14px">
             You haven't added products to your shop yet. Please{' '}
               <NextLink href={getLink('items')}>
-                <Link>add new products</Link>
+                <Link>add new product here</Link>
               </NextLink>
             </Text>
           </HStack>

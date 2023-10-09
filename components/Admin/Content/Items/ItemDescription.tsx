@@ -19,9 +19,9 @@ const ItemDescription = ({
         fontSize={{ base: '16px', sm: '14px', md: '16px' }}
       >
         <HStack>
-          <Text>Deskripsi</Text>
+          <Text>Description</Text>
           <Text fontFamily="source" fontWeight="normal" color="brand.black40">
-            (Opsional)
+            (Optional)
           </Text>
         </HStack>
       </FormLabel>

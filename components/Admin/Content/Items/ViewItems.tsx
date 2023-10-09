@@ -2,29 +2,12 @@ import { useMemo, useState } from 'react';
 import { HiOutlineFilter, HiSearch, HiX } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
-  Text,
-  useBreakpointValue,
-  VStack,
+    Box, Button, Heading, HStack, Icon, IconButton, Input, InputGroup, InputLeftElement,
+    InputRightElement, Text, useBreakpointValue, VStack
 } from '@chakra-ui/react';
 
 import {
-  FilterOptions,
-  Item,
-  ItemStatus,
-  sortByNameAsc,
-  sortByNameDesc,
-  sortByPriceAsc,
-  sortByPriceDesc,
+    FilterOptions, Item, ItemStatus, sortByNameAsc, sortByNameDesc, sortByPriceAsc, sortByPriceDesc
 } from '../../../../models';
 import { SearchIcon } from '../../../Icons/SearchIcon';
 import InfoButtonWithTooltip from '../../../InfoButtonWithTooltip';
@@ -137,10 +120,10 @@ const ViewItems = ({
           fontFamily="poppins"
           color="brand.black70"
         >
-          Kamu masih belum memiliki produk apapun.
+          You don't have any products yet.
         </Text>
         <Button fontFamily="poppins" minWidth="280px" onClick={onAddNewItem}>
-          Buat produk pertama saya
+          Create my first product
         </Button>
       </VStack>
     );
@@ -162,7 +145,7 @@ const ViewItems = ({
             display={{ base: 'none', sm: 'flex', md: 'none' }}
             disabled={!canAddNonHiddenItems}
           >
-            Tambah Produk Baru
+            Add New Product
           </Button>
         )}
         <HStack
@@ -191,7 +174,7 @@ const ViewItems = ({
                 fontWeight="semibold"
                 fontSize={{ base: '24px', sm: '16px', md: '24px' }}
               >
-                Produk
+                Product
               </Heading>
             </HStack>
           </HStack>
@@ -204,7 +187,7 @@ const ViewItems = ({
               display={{ base: 'flex', sm: 'none', md: 'flex' }}
               disabled={!canAddNonHiddenItems}
             >
-              Tambah Produk Baru
+              Add New Product
             </Button>
           </HStack>
         </HStack>
@@ -214,7 +197,7 @@ const ViewItems = ({
             fontFamily="poppins"
             fontSize={{ base: '14px', sm: '12px', md: '14px' }}
           >
-            Jumlah Produk Toko: {items.length}
+            Number of products in shop: {items.length}
           </Text>
           <Text
             fontFamily="source"
@@ -222,11 +205,11 @@ const ViewItems = ({
             fontSize={{ base: '14px', sm: '12px', md: '14px' }}
             color="brand.black40"
           >
-            ({availableItems.length} tersedia, {disabledItems.length} tidak
-            tersedia, {hiddenItems.length} tersembunyi)
+            ({availableItems.length} available, {disabledItems.length} not
+            available, {hiddenItems.length} hidden)
           </Text>
 
-          <InfoButtonWithTooltip label="Kamu hanya bisa memiliki maksimal 30 total produk tersedia dan tidak tersedia. Upgrade menjadi pengguna paket Premium untuk bisa memiliki jumlah produk tidak terbatas." />
+          <InfoButtonWithTooltip label="You can only have a maximum of 30 available and unavailable products in total. Upgrade to a Premium plan to get an unlimited number of products." />
         </HStack>
         <HStack pt="2" width="100%">
           <InputGroup w={{ base: '100%', md: '220px', lg: '450px' }} h="10">
@@ -234,7 +217,7 @@ const ViewItems = ({
               <Icon as={HiSearch} color="brand.gray" boxSize="5" />
             </InputLeftElement>
             <Input
-              placeholder="Cari produk disini"
+              placeholder="Search products"
               fontSize="md"
               lineHeight="14px"
               h="10"
@@ -281,7 +264,7 @@ const ViewItems = ({
               _focus={{ outline: 'none' }}
               onClick={onClearFilter}
             >
-              Tampilkan semua
+              Show all
             </Button>
           )}
         </HStack>
@@ -294,7 +277,7 @@ const ViewItems = ({
               color="brand.black40"
             >
               {filteredItems.length}
-              {' produk ditemukan'}
+              {' product(s) found'}
             </Text>
           </Box>
           {filteredItems.map((item) => (

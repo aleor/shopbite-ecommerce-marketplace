@@ -40,7 +40,7 @@ const ItemNote = ({
         borderRight="none"
         _focus={{ outline: 'none' }}
         _hover={{ borderColor: 'inherit' }}
-        placeholder="Write a note..."
+        placeholder="Add a note"
         fontSize="12px"
       />
       <InputRightAddon

@@ -62,7 +62,7 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Profile image is not saved',
+        title: 'Profile picture is not saved',
         description:
           'An error occurred during save, please try again',
         status: 'error',
@@ -77,8 +77,8 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
   const onImageAdded = async (file: File) => {
     if (file?.size > adminSettings.profile.maxProfileImageSize) {
       showToast({
-        title: 'Photo file size is too large',
-        description: 'Photo file size should not exceed 2MB',
+        title: 'Image size is too large',
+        description: 'Image file size should not exceed 2MB',
         status: 'error',
       });
       return;
@@ -169,7 +169,7 @@ const ProfilePhoto = ({ mode }: { mode: 'view' | 'edit' }) => {
             _focus={{ outline: 'none' }}
             isDisabled={isSaving}
           >
-            Change Picture
+            Update Picture
           </Button>
           <Button
             variant="link"

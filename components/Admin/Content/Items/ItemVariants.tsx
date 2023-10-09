@@ -2,17 +2,8 @@ import { useEffect, useState } from 'react';
 import { v4 } from 'uuid';
 
 import {
-  Box,
-  Button,
-  FormControl,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalOverlay,
-  Text,
-  useDisclosure,
-  VStack,
+    Box, Button, FormControl, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Text,
+    useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import { ItemVariant } from '../../../../models';
@@ -100,12 +91,12 @@ const ItemVariants = ({
           fontWeight="semibold"
           fontSize={{ base: '16px', sm: '14px', md: '16px' }}
         >
-          Harga<sup>*</sup>
+          Price<sup>*</sup>
         </Text>
 
         <Box maxWidth="fit-content">
           <Text fontFamily="poppins" fontSize="12px" color="brand.black70">
-            Kamu bisa menambahkan beberapa pilihan varian beserta harga masing-masing varian dengan click tulisan "Tambah varian produk" dibawah.
+            You can add several variant options along with the price of each variant by clicking the "Add product variant" below.
           </Text>
         </Box>
 
@@ -135,7 +126,7 @@ const ItemVariants = ({
                 setMode('showVariantForm');
               }}
             >
-              Tambah varian produk
+              Add product variants
             </Button>
           </Box>
         )}
@@ -165,8 +156,8 @@ const ItemVariants = ({
               textAlign="center"
             >
               {error === 'missing_data'
-                ? 'Pastikan Kamu sudah mengisi nama varian berserta harganya'
-                : 'Produk ini sudah memiliki varian dengan nama yang sama, nama setiap varian harus berbeda'}
+                ? 'Make sure you have filled in the variant name along with the price'
+                : 'This product already has variant with the same name, the name of each variant must be unique.'}
             </Text>
           </ModalBody>
           <ModalFooter>
@@ -179,7 +170,7 @@ const ItemVariants = ({
               onClick={onClose}
             >
               <Text fontFamily="poppins" fontSize="14px" color="white">
-                Oke
+                OK
               </Text>
             </Button>
           </ModalFooter>

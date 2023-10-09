@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import { useContext, useEffect, useState } from 'react';
 
 import {
@@ -6,7 +5,6 @@ import {
 } from '@chakra-ui/react';
 
 import { auth } from '../../../firebase/auth';
-import { Shop } from '../../../models';
 import { Logo } from '../../Icons/Logo';
 import { ShopContext } from '../hooks/shopContext';
 import HorizontalNavBar from '../Navigation/HorizontalNavBar';

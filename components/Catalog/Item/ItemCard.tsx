@@ -2,26 +2,13 @@ import Image from 'next/image';
 import { useCallback } from 'react';
 import { HiOutlinePlusCircle } from 'react-icons/hi';
 
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  IconButton,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, IconButton, Text, VStack } from '@chakra-ui/react';
 
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { addToCart } from '../../../features/cart/cart-slice';
 import { parseJSONSafely } from '../../../libs/parseJSONSafely';
 import { useIsMobile } from '../../../libs/useIsMobile';
-import {
-  getLowestPrice,
-  getThumbnailUrl,
-  Item,
-  ItemStatus,
-} from '../../../models';
+import { getLowestPrice, getThumbnailUrl, Item, ItemStatus } from '../../../models';
 import Price from './Price';
 
 export const ItemCard = ({
@@ -151,7 +138,7 @@ export const ItemCard = ({
                     color="brand.green"
                     _focus={{ outline: 'none' }}
                     icon={<HiOutlinePlusCircle size="24px" />}
-                    aria-label="Tambah ke Keranjang"
+                    aria-label="Add to Cart"
                     onClick={(e) => {
                       e.stopPropagation();
                       onAdd();

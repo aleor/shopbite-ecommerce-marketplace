@@ -217,7 +217,7 @@ const ItemPreview = ({ item }: { item: Item }) => {
                 dispatch(showModal(false));
               }}
             >
-              {`+ Keranjang - ${formatPrice(
+              {`+ Cart - ${formatPrice(
                 getTotalCustomizedItemPrice({
                   item,
                   variant: selectedVariant,

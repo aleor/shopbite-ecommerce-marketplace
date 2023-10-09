@@ -8,11 +8,9 @@ import { ItemCard } from '../Item/ItemCard';
 const CollectionSection = ({
   collection,
   showTitle = true,
-  first = false,
 }: {
   collection: Collection;
   showTitle?: boolean;
-  first?: boolean;
 }) => {
   const dispatch = useAppDispatch();
 

@@ -3,13 +3,7 @@ import { Reorder } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { HiOutlineMenuAlt4, HiOutlineTrash } from 'react-icons/hi';
 
-import {
-  Box,
-  chakra,
-  HStack,
-  IconButton,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Box, chakra, HStack, IconButton, useDisclosure } from '@chakra-ui/react';
 
 import { db } from '../../../../firebase/firestore';
 import { useToast } from '../../../../libs/useToast';
@@ -77,8 +71,8 @@ const ManageCollections = ({
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal menyimpan perubahan',
-        description: 'Harap mencoba kembali',
+        title: 'Failed to save changes',
+        description: 'Please try again',
         status: 'error',
       });
       console.log(error);
@@ -157,8 +151,8 @@ const ManageCollections = ({
     } catch (error) {
       console.log(error);
       showToast({
-        title: 'Gagal menghapus koleksi',
-        description: 'Terjadi kesalahan dalam menghapus, harap mencoba kembali',
+        title: 'Failed to delete collection',
+        description: 'An error occurred during delete, please try again',
         status: 'error',
       });
     }
@@ -294,10 +288,10 @@ const ManageCollections = ({
           onDeleteCollection();
           onDeleteCollectionModalClose();
         }}
-        title="Apakah kamu yakin ingin menghapus koleksi ini?"
-        message="Koleksi yang dihapus tidak dapat dikembalikan."
-        confirmButtonLabel="Hapus"
-        cancelButtonLabel="Batalkan"
+        title="Are you sure you want to delete this collection?"
+        message="Deleted collections cannot be restored"
+        confirmButtonLabel="Delete"
+        cancelButtonLabel="Cancel"
       />
 
       <ConfirmationModal
@@ -307,10 +301,10 @@ const ManageCollections = ({
           onGoBackWithoutChangesModalClose();
           onClose();
         }}
-        title="Apakah kamu yakin ingin keluar tanpa menyimpan perubahan?"
-        message="Perubahan yang tidak tersimpan akan hilang"
-        confirmButtonLabel="Iya"
-        cancelButtonLabel="Lanjut edit"
+        title="Are you sure you want to leave without saving changes?"
+        message="Unsaved changes will be lost"
+        confirmButtonLabel="Leave"
+        cancelButtonLabel="Cancel"
       />
     </>
   );

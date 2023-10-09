@@ -23,7 +23,7 @@ const Register = () => {
   const [error, setError] = useState<AuthError>();
   const [loading, setLoading] = useState<boolean>(false);
 
-  const { ipResponse, currency } = useReactIpLocation();
+  const { ipResponse } = useReactIpLocation();
 
   const [currentUser, currentUserLoading] = useAuthState(auth);
 

@@ -18,7 +18,7 @@ const ItemTitle = ({
         fontWeight="semibold"
         fontSize={{ base: '16px', sm: '14px', md: '16px' }}
       >
-        Nama Produk<sup>*</sup>
+        Product Title<sup>*</sup>
       </FormLabel>
       <InputGroup size="md">
         <Input

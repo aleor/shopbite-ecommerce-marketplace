@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { useContext, useEffect, useState } from 'react';
 import useSWR from 'swr';
 
-import { Box, Heading, HStack, SimpleGrid, Spinner, Stack, Text, VStack } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Spinner, Stack, Text, VStack } from '@chakra-ui/react';
 
 import { mapToItemAnalyticsResult } from '../../../../../libs/analytics/mapToItemAnalyticsResult';
 import fetcher from '../../../../../libs/fetcher';

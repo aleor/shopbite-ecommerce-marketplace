@@ -1,12 +1,5 @@
 import {
-  Button,
-  FormControl,
-  FormLabel,
-  HStack,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  VStack,
+    Button, FormControl, FormLabel, HStack, Input, InputGroup, InputRightAddon, VStack
 } from '@chakra-ui/react';
 
 import { ItemVariant } from '../../../../models';
@@ -35,7 +28,7 @@ const ItemVariantForm = ({
           fontSize="12px"
           mb="1"
         >
-          Nama Varian
+          Variant name
         </FormLabel>
 
         <InputGroup size="md">
@@ -83,7 +76,7 @@ const ItemVariantForm = ({
           fontSize="12px"
           mb="1"
         >
-          Harga
+          Price
         </FormLabel>
 
         <ItemPriceField
@@ -107,7 +100,7 @@ const ItemVariantForm = ({
           color="brand.green"
           onClick={onBack}
         >
-          Kembali
+          Back
         </Button>
 
         <Button
@@ -117,7 +110,7 @@ const ItemVariantForm = ({
           _focus={{ outline: 'none' }}
           onClick={onSubmit}
         >
-          Simpan
+          Save
         </Button>
       </HStack>
     </VStack>

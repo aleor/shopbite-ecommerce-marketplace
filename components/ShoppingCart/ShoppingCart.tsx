@@ -234,7 +234,7 @@ const ShoppingCart = () => {
               <HStack fontSize="md" fontWeight="normal">
                 <Text flex="1" color="brand.black">
                   Total {getTotalItems(cartItems)}
-                  {' item'}
+                  {' item(s)'}
                 </Text>
                 <Text
                   color="brand.black"
@@ -260,7 +260,7 @@ const ShoppingCart = () => {
                 }}
                 isDisabled={executing || !!orderLink}
                 isLoading={executing}
-                loadingText="Placing order..."
+                loadingText="Creating order..."
               >
                 {orderLink ? 'Order successfully created' : 'Create an order'}
               </Button>

@@ -35,7 +35,7 @@ const ItemsHeader = ({
               fontWeight="semibold"
               fontSize="24px"
             >
-              Items
+              Products
             </Heading>
           </HStack>
         </HStack>
@@ -46,7 +46,7 @@ const ItemsHeader = ({
             size="md"
             onClick={onAddNewItem}
           >
-            Add new item
+            Add new product
           </Button>
         </HStack>
       </HStack>

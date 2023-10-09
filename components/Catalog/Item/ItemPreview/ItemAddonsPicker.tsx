@@ -32,7 +32,7 @@ const ItemAddonsPicker = ({
   return (
     <VStack alignItems="flex-start" w="100%">
       <Text fontFamily="poppins" fontSize="12px" fontWeight="medium">
-        Choose an Add-on
+        Select Add-on
       </Text>
 
       <VStack alignItems="flex-start">

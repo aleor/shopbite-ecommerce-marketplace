@@ -50,7 +50,7 @@ const ItemLinkRow = ({
       </VStack>
       <IconButton
         icon={<HiOutlineTrash size="16px" />}
-        aria-label="Hapus link"
+        aria-label="Delete link"
         variant="ghost"
         color="brand.red"
         _focus={{ outline: 'none' }}

@@ -5,16 +5,7 @@ import { useUploadFile } from 'react-firebase-hooks/storage';
 import { HiOutlineArrowLeft, HiOutlineTrash } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Divider,
-  HStack,
-  IconButton,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useDisclosure,
-  VStack,
+    Box, Button, Divider, HStack, IconButton, Stack, Text, useBreakpointValue, useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import firebaseApp from '../../../../firebase/clientApp';
@@ -22,12 +13,7 @@ import { db } from '../../../../firebase/firestore';
 import { parseJSONSafely } from '../../../../libs/parseJSONSafely';
 import { useToast } from '../../../../libs/useToast';
 import {
-  Collection,
-  collectionConverter,
-  Item,
-  ItemStatus,
-  ItemUploadImage,
-  ItemVariant,
+    Collection, collectionConverter, Item, ItemStatus, ItemUploadImage, ItemVariant
 } from '../../../../models';
 import { adminSettings } from '../../adminSettings';
 import ConfirmationModal from '../../ConfirmationModal';
@@ -227,8 +213,8 @@ const EditItem = ({
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal menyimpan perubahan produk',
-        description: 'Terjadi kesalahan dalam menyimpan, harap mencoba kembali',
+        title: 'Failed to save product changes',
+        description: 'An error occurred during save, please try again',
         status: 'error',
       });
       console.error(error);
@@ -246,8 +232,8 @@ const EditItem = ({
     } catch (error) {
       setIsSaving(false);
       showToast({
-        title: 'Gagal menghapus produk',
-        description: 'Terjadi kesalahan dalam menghapus, harap mencoba kembali',
+        title: 'Failed to delete the product',
+        description: 'An error occurred during save, please try again',
         status: 'error',
       });
       console.error(error);
@@ -321,7 +307,7 @@ const EditItem = ({
 
   return (
     <>
-      <SpinnerOverlay visible={isSaving} message="Menyimpan perubahan..." />
+      <SpinnerOverlay visible={isSaving} message="Saving changes..." />
       <Box pointerEvents={isSaving ? 'none' : 'all'}>
         <Box>
           <HStack justifyContent="space-between">
@@ -350,7 +336,7 @@ const EditItem = ({
                 <IconButton
                   icon={<HiOutlineTrash size="24px" />}
                   onClick={onDeleteItemOpen}
-                  aria-label="Hapus Produk"
+                  aria-label="Delete Product"
                   variant="ghost"
                   color="brand.red"
                   _focus={{ outline: 'none' }}
@@ -363,7 +349,7 @@ const EditItem = ({
                   size="md"
                   isDisabled={!saveEnabled || isSaving}
                 >
-                  Simpan
+                  Save
                 </Button>
               </HStack>
             </Box>
@@ -512,7 +498,7 @@ const EditItem = ({
             onClick={onSave}
             _focus={{ outline: 'none' }}
           >
-            <Text color="white">Simpan</Text>
+            <Text color="white">Save</Text>
           </Button>
 
           <Button
@@ -524,7 +510,7 @@ const EditItem = ({
             _focus={{ outline: 'none' }}
           >
             <Text color="brand.red" fontFamily="poppins" fontWeight="medium">
-              Hapus Produk
+              Delete Product
             </Text>
           </Button>
         </Box>
@@ -537,10 +523,10 @@ const EditItem = ({
           onDelete();
           onDeleteItemClose();
         }}
-        title="Apakah kamu yaking ingin menghapus produk ini?"
-        message="Produk yang sudah dihapus tidak dapat dikembalikan kembali."
-        confirmButtonLabel="Hapus"
-        cancelButtonLabel="Batal"
+        title="Do you want to remove this product?"
+        message="Products that have been deleted cannot be restored."
+        confirmButtonLabel="Delete"
+        cancelButtonLabel="Cancel"
       />
 
       <ConfirmationModal
@@ -550,10 +536,10 @@ const EditItem = ({
           onGoBackWithoutChangesModalClose();
           onClose();
         }}
-        title="Apakah kamu yakin ingin kembali tanpa menyimpan perubahan?"
-        message="Perubahan yang tidak disimpan akan hilang"
-        confirmButtonLabel="Iya"
-        cancelButtonLabel="Lanjut edit"
+        title="Are you sure you want to leave without saving the changes?"
+        message="Unsaved changes will be lost"
+        confirmButtonLabel="Leave"
+        cancelButtonLabel="Cancel"
       />
     </>
   );

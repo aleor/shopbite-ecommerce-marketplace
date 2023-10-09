@@ -138,12 +138,11 @@ const Collections = ({ collections }: { collections: Collection[] | null }) => {
             )}
           </Box>
 
-          {filteredCollections.map((collection, index) => (
+          {filteredCollections.map((collection) => (
             <Box key={collection.id} id={collection.id}>
               <CollectionSection
                 collection={collection}
                 showTitle={collections?.length !== 1}
-                first={index === 0}
               />
             </Box>
           ))}
