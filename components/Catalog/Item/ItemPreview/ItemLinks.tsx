@@ -38,7 +38,7 @@ const ItemLinks = ({ links }: { links: ItemLink[] }) => {
   return (
     <VStack py="2" spacing="2" alignItems="flex-start">
       <Text fontFamily="poppins" fontWeight="medium" fontSize="12px">
-        Juga tersedia melalui
+        Also available through
       </Text>
       <HStack h="32px" spacing={4}>
         {links.map((link) => (

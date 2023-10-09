@@ -1,13 +1,7 @@
 import { Field } from 'formik';
 import NextLink from 'next/link';
 
-import {
-  Checkbox,
-  FormControl,
-  FormErrorMessage,
-  Link,
-  Text,
-} from '@chakra-ui/react';
+import { Checkbox, FormControl, FormErrorMessage, Link, Text } from '@chakra-ui/react';
 
 export const TermsCheckbox = ({ disabled = false }) => {
   return (
@@ -15,7 +9,7 @@ export const TermsCheckbox = ({ disabled = false }) => {
       name="terms"
       validate={(checked) => {
         return !checked
-          ? 'Anda harus menyetujui syarat ketentuan dan kebijakan privasi kami untuk mendaftar'
+          ? 'You need to agree to our terms & conditions and privacy policy to register'
           : undefined;
       }}
     >
@@ -32,15 +26,14 @@ export const TermsCheckbox = ({ disabled = false }) => {
             }}
           >
             <Text>
-              Dengan mendaftarkan akun, maka Anda menyetujui{' '}
+            By registering an account, you agree to our{' '}
               <NextLink href="/terms">
-                <Link>Syarat dan Ketentuan</Link>
+                <Link>Terms and Conditions</Link>
               </NextLink>{' '}
-              dan{' '}
+              and{' '}
               <NextLink href="/privacypolicy">
-                <Link>Kebijakan Privasi</Link>
+                <Link>Privacy Policy</Link>
               </NextLink>{' '}
-              kami
             </Text>
           </Checkbox>
           <FormErrorMessage fontSize="xs" color="brand.red">

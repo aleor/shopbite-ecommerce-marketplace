@@ -1,14 +1,6 @@
 import { useState } from 'react';
 
-import {
-  Checkbox,
-  HStack,
-  Radio,
-  RadioGroup,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Checkbox, Text, VStack } from '@chakra-ui/react';
 
 import { useAppSelector } from '../../../../app/hooks';
 import { formatPrice } from '../../../../libs/formatPrice';
@@ -40,7 +32,7 @@ const ItemAddonsPicker = ({
   return (
     <VStack alignItems="flex-start" w="100%">
       <Text fontFamily="poppins" fontSize="12px" fontWeight="medium">
-        Pilih Tambahan
+        Choose an Add-on
       </Text>
 
       <VStack alignItems="flex-start">

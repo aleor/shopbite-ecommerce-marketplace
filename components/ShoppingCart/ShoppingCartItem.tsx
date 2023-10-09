@@ -1,28 +1,11 @@
 import { HiOutlineTrash } from 'react-icons/hi';
 
-import {
-  Box,
-  Flex,
-  HStack,
-  IconButton,
-  Image,
-  Link,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Flex, HStack, IconButton, Image, Link, Stack, Text } from '@chakra-ui/react';
 
 import { useAppDispatch } from '../../app/hooks';
-import {
-  updateCartItemNote,
-  updateCartItemQuantity,
-} from '../../features/cart/cart-slice';
+import { updateCartItemNote, updateCartItemQuantity } from '../../features/cart/cart-slice';
 import { selectAndShowDetails } from '../../features/items/items-slice';
-import {
-  CartItem,
-  getThumbnailUrl,
-  getTotalCustomizedItemPrice,
-  Item,
-} from '../../models';
+import { CartItem, getThumbnailUrl, getTotalCustomizedItemPrice, Item } from '../../models';
 import { QuantityPicker } from '../Catalog/Item/ItemPreview/QuantityPicker';
 import Price from '../Catalog/Item/Price';
 import CartItemNote from './CartItemNote';
@@ -91,7 +74,7 @@ const ShoppingCartItem = ({
 
               {variant && (
                 <HStack fontFamily="source" fontSize="12px" spacing="4px" fontWeight="normal">
-                  <Text color="brand.black40">Varian: </Text>
+                  <Text color="brand.black40">Variant: </Text>
                   <Text>{variant.label}</Text>
                 </HStack>
               )}
@@ -99,7 +82,7 @@ const ShoppingCartItem = ({
               {addOns?.length > 0 && (
                 <HStack fontFamily="source" fontSize="12px" spacing="4px" fontWeight="normal">
                   <Text color="brand.black40" flexShrink={0}>
-                    Tambahan:{' '}
+                    Add-ons:{' '}
                   </Text>
                   <Text>{addOns.map((a) => a.label).join(' + ')}</Text>
                 </HStack>

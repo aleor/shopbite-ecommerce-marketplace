@@ -18,7 +18,7 @@ const MyCartButton = ({ cartItems }) => {
     >
       <Button size="md" width="100%" onClick={() => dispatch(openCart())}>
         <Text color="white">{`
-                Keranjang Saya - ${formatPrice(
+                My cart - ${formatPrice(
                   getCartTotalPrice(cartItems)
                 )}`}</Text>
       </Button>

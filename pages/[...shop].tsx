@@ -15,13 +15,7 @@ import { setShop } from '../features/shop/shop-slice';
 import { db } from '../firebase/firestore';
 import { functionsRegion } from '../firebase/functions';
 import { injectShop, logViewCatalog } from '../libs/analytics/logEvents';
-import {
-  Collection,
-  collectionConverter,
-  itemConverter,
-  Shop,
-  shopConverter,
-} from '../models';
+import { Collection, collectionConverter, itemConverter, Shop, shopConverter } from '../models';
 
 const Shop = ({
   shop,
@@ -149,7 +143,7 @@ export async function getServerSideProps(context) {
         itemList: nonHiddenItemsQuerySnapshot.docs.map((doc, index) => {
           return { ordering: index, ...doc.data() };
         }),
-        label: 'Semua Produk',
+        label: 'All products',
         ordering: Number.MAX_VALUE,
       };
 

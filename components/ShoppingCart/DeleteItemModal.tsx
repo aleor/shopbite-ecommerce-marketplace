@@ -1,12 +1,5 @@
 import {
-  Button,
-  HStack,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalOverlay,
-  Text,
+    Button, HStack, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Text
 } from '@chakra-ui/react';
 
 const DeleteItemModal = ({ isOpen, onClose, onDelete }) => {
@@ -22,7 +15,7 @@ const DeleteItemModal = ({ isOpen, onClose, onDelete }) => {
             width="100%"
             textAlign="center"
           >
-            Apakah Anda yakin ingin menghapus produk ini dari keranjang belanja?
+            Are you sure you want to remove this product from your shopping cart?
           </Text>
         </ModalBody>
         <ModalFooter>
@@ -37,7 +30,7 @@ const DeleteItemModal = ({ isOpen, onClose, onDelete }) => {
               onClick={onClose}
             >
               <Text fontFamily="poppins" fontSize="14px" color="brand.green">
-                Batalkan
+                Cancel
               </Text>
             </Button>
             <Button
@@ -47,7 +40,7 @@ const DeleteItemModal = ({ isOpen, onClose, onDelete }) => {
               _focus={{ outline: 'none' }}
             >
               <Text fontFamily="poppins" fontSize="14px" color="white">
-                Hapus
+                Delete
               </Text>
             </Button>
           </HStack>

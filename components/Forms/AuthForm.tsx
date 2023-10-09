@@ -1,6 +1,4 @@
-import NextLink from 'next/link';
-
-import { Box, Center, Container, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Center, Container } from '@chakra-ui/react';
 
 import { Logo } from '../Icons/Logo';
 

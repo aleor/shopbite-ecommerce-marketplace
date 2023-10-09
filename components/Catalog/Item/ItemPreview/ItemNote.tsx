@@ -25,7 +25,7 @@ const ItemNote = ({
         color="brand.green"
         paddingLeft="3px"
       >
-        <Text color="brand.green">Tambah catatan</Text>
+        <Text color="brand.green">Add a note</Text>
       </Button>
     );
   }
@@ -40,7 +40,7 @@ const ItemNote = ({
         borderRight="none"
         _focus={{ outline: 'none' }}
         _hover={{ borderColor: 'inherit' }}
-        placeholder="Tulis catatan..."
+        placeholder="Write a note..."
         fontSize="12px"
       />
       <InputRightAddon

@@ -77,7 +77,7 @@ export const creatingOrderHtml = `
                     id="logo-bottom"
                 />
             </div>
-            <h4 id="text-loading">Harap menunggu, pesanan Anda sedang disiapkan...</h4>
+            <h4 id="text-loading">Please wait, your order is being processed...</h4>
         </div>
     </body>
 </html>

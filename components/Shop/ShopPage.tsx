@@ -71,7 +71,7 @@ const ShopPage = ({
           onClick={() => dispatch(openCart())}
           justifyContent="space-between"
         >
-          <Text color="white">{`Item di keranjang: ${getTotalItems(
+          <Text color="white">{`Items in cart: ${getTotalItems(
             cartItems
           )}`}</Text>
           <Text color="white">{formatPrice(getCartTotalPrice(cartItems))}</Text>

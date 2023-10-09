@@ -1,21 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import {
-  Box,
-  Button,
-  HStack,
-  IconButton,
-  IconButtonProps,
-  Input,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTrigger,
-  SimpleGrid,
-  VStack,
+    Box, Button, HStack, IconButton, IconButtonProps, Input, Popover, PopoverArrow, PopoverBody,
+    PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, SimpleGrid, VStack
 } from '@chakra-ui/react';
 
 import { logShareEvent } from '../../libs/analytics/logEvents';
@@ -62,7 +49,7 @@ const ShareButton = ({
         <PopoverArrow />
         <PopoverCloseButton mt="1" />
         <PopoverHeader fontWeight="semibold" border="none" pl="6">
-          Bagikan melalui
+          Share via
         </PopoverHeader>
 
         <PopoverBody
@@ -125,7 +112,7 @@ const ShareButton = ({
                   navigator.clipboard.writeText(url);
                 }}
               >
-                Salin
+                Copy
               </Button>
             </HStack>
           </VStack>

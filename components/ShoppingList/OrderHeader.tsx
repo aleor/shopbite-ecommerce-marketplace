@@ -30,7 +30,7 @@ const OrderHeader = ({ order, shop }: { order: Order; shop: Shop }) => {
   const renderOrderDate = useCallback(() => {
     return (
       <>
-        <Text>Tanggal Pemesanan</Text>
+        <Text>Order date</Text>
         <Text color="brand.black70">
           {format(order.createdAt, 'dd MMM, yyyy; HH:mm OOOO')}
         </Text>

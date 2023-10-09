@@ -17,7 +17,7 @@ export const RememberMeCheckbox = ({ disabled = false }) => {
               form.setFieldValue('rememberMe', e.target.checked);
             }}
           >
-            <Text>Ingat saya</Text>
+            <Text>Remember me</Text>
           </Checkbox>
         </FormControl>
       )}

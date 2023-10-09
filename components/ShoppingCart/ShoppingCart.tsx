@@ -4,19 +4,8 @@ import { useHttpsCallable } from 'react-firebase-hooks/functions';
 import { HiArrowLeft, HiOutlineExclamationCircle } from 'react-icons/hi';
 
 import {
-  Box,
-  Button,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  HStack,
-  Icon,
-  IconButton,
-  Link,
-  Stack,
-  Text,
-  useDisclosure,
-  VStack,
+    Box, Button, Drawer, DrawerContent, DrawerOverlay, HStack, Icon, IconButton, Link, Stack, Text,
+    useDisclosure, VStack
 } from '@chakra-ui/react';
 
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
@@ -32,7 +21,6 @@ import { CartItem, CustomerInfo, Order } from '../../models';
 import CopyLinkButton from '../CopyLinkButton';
 import ShareButton from '../ShareButton/ShareButton';
 import { creatingOrderHtml } from './creatingOrderHtml';
-import CustomerInfoForm from './CustomerInfoForm';
 import DeleteItemModal from './DeleteItemModal';
 import ShoppingCartItem from './ShoppingCartItem';
 
@@ -139,7 +127,7 @@ const ShoppingCart = () => {
             h="20px"
           />
           <Text color="brand.error">
-            Terjadi kesalahan, harap mencoba kembali.
+            An error occurred, please try again.
           </Text>
         </HStack>
       );
@@ -154,7 +142,7 @@ const ShoppingCart = () => {
           alignItems="flex-start"
           lineHeight="14px"
         >
-          <Text>Link detil pesanan:</Text>
+          <Text>Link to order details:</Text>
 
           <NextLink href={orderLink}>
             <Link noOfLines={1} wordBreak="break-all">
@@ -193,7 +181,7 @@ const ShoppingCart = () => {
               />
 
               <Text fontSize="16px" fontFamily="poppins" fontWeight="semibold">
-                Keranjang Saya
+                My Cart
               </Text>
             </HStack>
 
@@ -272,9 +260,9 @@ const ShoppingCart = () => {
                 }}
                 isDisabled={executing || !!orderLink}
                 isLoading={executing}
-                loadingText="Membuat pesanan..."
+                loadingText="Placing order..."
               >
-                {orderLink ? 'Pesanan berhasil dibuat' : 'Buat pesanan'}
+                {orderLink ? 'Order successfully created' : 'Create an order'}
               </Button>
             </Stack>
           </DrawerContent>

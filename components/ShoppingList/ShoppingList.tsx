@@ -1,14 +1,11 @@
 import { Box, SimpleGrid, VStack } from '@chakra-ui/react';
 
-import { useIsMobile } from '../../libs/useIsMobile';
 import { Order, Shop } from '../../models';
 import OrderFooter from './OrderFooter';
 import OrderHeader from './OrderHeader';
 import PurchasedItem from './PurchasedItem';
 
 const ShoppingList = ({ order, shop }: { order: Order; shop: Shop }) => {
-  const isMobile = useIsMobile();
-
   if (!order || !shop) {
     return null;
   }

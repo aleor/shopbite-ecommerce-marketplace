@@ -10,9 +10,9 @@ const NoCollections = () => {
       <Icon as={BiBasket} width="54px" height="54px" />
 
       <Box textAlign="center">
-        <Text color="brand.black70">Toko belum memiliki produk.</Text>
+        <Text color="brand.black70">The store does not have any products yet.</Text>
         <Text color="brand.black70">
-          Anda dapat mencoba datang kembali nanti.
+          Please try to come back later.
         </Text>
       </Box>
     </ShopStatusLayout>

@@ -1,16 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Spacer,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, HStack, Spacer, Stack, Text, VStack } from '@chakra-ui/react';
 
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
 import { addToCart } from '../../../../features/cart/cart-slice';
@@ -19,12 +9,7 @@ import { formatPrice } from '../../../../libs/formatPrice';
 import { getShopItemLink } from '../../../../libs/getLinks';
 import { parseJSONSafely } from '../../../../libs/parseJSONSafely';
 import {
-  getPriceRange,
-  getTotalCustomizedItemPrice,
-  Item,
-  ItemAddOn,
-  ItemStatus,
-  ItemVariant,
+    getPriceRange, getTotalCustomizedItemPrice, Item, ItemAddOn, ItemStatus, ItemVariant
 } from '../../../../models';
 import ShareButton from '../../../ShareButton/ShareButton';
 import Price from '../Price';
@@ -141,7 +126,6 @@ const ItemPreview = ({ item }: { item: Item }) => {
                 alignItems="flex-start"
                 pl="1"
               >
-                {console.log(item)}
                 {item.externalLinks?.length > 0 && (
                   <ItemLinks links={item.externalLinks} />
                 )}

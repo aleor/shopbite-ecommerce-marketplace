@@ -23,7 +23,7 @@ const Admin = () => {
 
     return (
       <Center pt="10">
-        <Text>Terjadi kesalahan, harap mencoba kembali</Text>
+        <Text>An error occured, please try again</Text>
       </Center>
     );
   }
@@ -33,7 +33,7 @@ const Admin = () => {
       <Center pt="10">
         <HStack spacing="4">
           <Spinner color="brand.blue"></Spinner>
-          <Text>Harap menunggu...</Text>
+          <Text>Please wait...</Text>
         </HStack>
       </Center>
     );
@@ -50,7 +50,7 @@ const Admin = () => {
           <Center pt="10">
             <HStack spacing="4">
               <Spinner color="brand.blue"></Spinner>
-              <Text>Memuat panel admin...</Text>
+              <Text>Loading admin panel...</Text>
             </HStack>
           </Center>
         }

@@ -1,9 +1,4 @@
-import {
-  AuthError,
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  UserCredential,
-} from 'firebase/auth';
+import { AuthError, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import { doc, setDoc, Timestamp } from 'firebase/firestore';
 import { Form, Formik } from 'formik';
 import NextHeader from 'next/head';
@@ -78,13 +73,13 @@ const Register = () => {
 
     switch (error.code) {
       case 'auth/email-already-in-use':
-        return 'Email ini telah terdaftar';
+        return 'This email has already been registered';
       case 'auth/invalid-email':
-        return 'Email tidak valid';
+        return 'Invalid email';
       case 'auth/invalid-password' || 'auth/user-not-found':
-        return 'Email atau sandi salah';
+        return 'Incorrect Email or Password';
       default:
-        return 'Pastikan koneksi internet kamu lancar dan coba lagi';
+        return 'Please make sure your internet connection is working and try again';
     }
   };
 
@@ -137,7 +132,7 @@ const Register = () => {
                       !props.dirty || !props.isValid || props.isValidating
                     }
                   >
-                    Daftarkan Akun
+                    Register an account
                   </Button>
                   <HStack
                     fontFamily="source"
@@ -145,9 +140,9 @@ const Register = () => {
                     justify="center"
                     fontSize="sm"
                   >
-                    <Text>Sudah memiliki akun?</Text>
+                    <Text>Already have an account?</Text>
                     <NextLink href="/signin">
-                      <Link>Masuk disini</Link>
+                      <Link>Login</Link>
                     </NextLink>
                   </HStack>
                 </Stack>

@@ -1,13 +1,6 @@
 import { useCallback } from 'react';
 
-import {
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  HStack,
-  Input,
-  Stack,
-} from '@chakra-ui/react';
+import { FormControl, FormErrorMessage, FormLabel, HStack, Input, Stack } from '@chakra-ui/react';
 
 import { CustomerInfo } from '../../models';
 
@@ -58,7 +51,7 @@ const CustomerInfoForm = ({
         color="brand.error"
         m="0"
       >
-        (Wajib diisi)
+        (Required)
       </FormErrorMessage>
     );
   }, []);
@@ -87,11 +80,11 @@ const CustomerInfoForm = ({
           justifyContent="space-between"
           alignItems="baseline"
         >
-          {renderLabel('Nama Anda')}
+          {renderLabel('Your name')}
           <Input
             borderRadius="8px"
             size="sm"
-            placeholder="cth. Andi"
+            placeholder="e.g. Andi"
             _focus={{ outline: 'none' }}
             value={customerInfo.name}
             onChange={handleNameChange}
@@ -106,7 +99,7 @@ const CustomerInfoForm = ({
           justifyContent="space-between"
           alignItems="baseline"
         >
-          {renderLabel('No HP')}
+          {renderLabel('Phone number')}
           <Input
             size="sm"
             placeholder="+6281234567890"
@@ -135,10 +128,10 @@ const CustomerInfoForm = ({
           justifyContent="space-between"
           alignItems="baseline"
         >
-          {renderLabel('Alamat')}
+          {renderLabel('Address')}
           <Input
             size="sm"
-            placeholder="cth. Jl. Kemerdekaan no 50, Jakarta Barat"
+            placeholder="e.g. Jl. Kemerdekaan no 50, Jakarta Barat"
             borderRadius="8px"
             _focus={{ outline: 'none' }}
             value={customerInfo.address}

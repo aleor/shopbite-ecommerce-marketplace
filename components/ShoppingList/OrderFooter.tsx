@@ -27,7 +27,7 @@ const OrderFooter = ({ items = [] }: { items: OrderItem[] }) => {
         paddingX={{ base: '20', sm: '6', md: '20' }}
       >
         <Text fontFamily="poppins" fontWeight="normal" fontSize="12px">
-          Total {getTotalItems(items)} item
+          Total {getTotalItems(items)} item(s)
         </Text>
         <Text fontFamily="poppins" fontWeight="semibold" fontSize="16px">
           {formatPrice(getOrderTotalPrice(items))}

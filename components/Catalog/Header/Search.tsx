@@ -29,7 +29,7 @@ const Search = () => {
           <Icon as={HiSearch} color="brand.gray" boxSize="5" />
         </InputLeftElement>
         <Input
-          placeholder="Cari produk disini"
+          placeholder="Search a product here"
           fontSize="md"
           lineHeight="14px"
           h="10"

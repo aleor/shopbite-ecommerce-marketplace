@@ -1,16 +1,10 @@
-import {
-  browserLocalPersistence,
-  browserSessionPersistence,
-} from 'firebase/auth';
+import { browserLocalPersistence, browserSessionPersistence } from 'firebase/auth';
 import { Form, Formik } from 'formik';
 import NextHeader from 'next/head';
 import NextLink from 'next/link';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
-import {
-  useAuthState,
-  useSignInWithEmailAndPassword,
-} from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 
 import { Box, Button, HStack, Icon, Link, Stack, Text } from '@chakra-ui/react';
@@ -96,7 +90,7 @@ const SignIn = () => {
 
                   <Box minW="fit-content">
                     <NextLink href="/resetpassword">
-                      <Link fontSize="md">Lupa Sandi</Link>
+                      <Link fontSize="md">Reset password</Link>
                     </NextLink>
                   </Box>
                 </HStack>
@@ -106,7 +100,7 @@ const SignIn = () => {
                     <>
                       <Icon as={HiOutlineExclamationCircle} />
                       <Text color="brand.error">
-                        Email atau sandi Anda salah
+                        Wrong e-mail or password
                       </Text>
                     </>
                   )}
@@ -120,7 +114,7 @@ const SignIn = () => {
                       isFormAutofilled ? false : !props.dirty || !props.isValid
                     }
                   >
-                    Masuk
+                    Login
                   </Button>
                   <HStack
                     fontFamily="source"
@@ -128,10 +122,10 @@ const SignIn = () => {
                     justify="center"
                     fontSize="sm"
                   >
-                    <Text>Belum memiliki akun?</Text>
+                    <Text>Don't have an account yet?</Text>
                     <NextLink href="register">
                       <Text>
-                        <Link>Daftar</Link> gratis sekarang
+                        <Link>Create</Link> one for free
                       </Text>
                     </NextLink>
                   </HStack>

@@ -2,21 +2,9 @@ import { Form, Formik } from 'formik';
 import NextHeader from 'next/head';
 import { useState } from 'react';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import {
-  HiOutlineCheckCircle,
-  HiOutlineExclamationCircle,
-} from 'react-icons/hi';
+import { HiOutlineCheckCircle, HiOutlineExclamationCircle } from 'react-icons/hi';
 
-import {
-  Box,
-  Button,
-  Center,
-  HStack,
-  Icon,
-  Link,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Button, Center, HStack, Icon, Link, Stack, Text } from '@chakra-ui/react';
 
 import AuthForm from '../components/Forms/AuthForm';
 import { EmailField } from '../components/Forms/EmailField';
@@ -45,7 +33,7 @@ const ResetPassword = () => {
               <Stack spacing="2">
                 <Center>
                   <Text fontSize="xxl" fontWeight="semibold">
-                    Reset kata sandi
+                    Reset password
                   </Text>
                 </Center>
                 <Center>
@@ -56,8 +44,8 @@ const ResetPassword = () => {
                     textAlign="center"
                     pt="2"
                   >
-                    Kami akan mengirimkan sebuah email untuk mengatur ulang kata
-                    sandi Anda
+                    We will send you an email to reset your
+                    password
                   </Text>
                 </Center>
                 <Box pt="6">
@@ -67,8 +55,7 @@ const ResetPassword = () => {
                   <HStack color="brand.success" fontSize="xs" pt="3" height="6">
                     <Icon as={HiOutlineCheckCircle} />
                     <Text color="brand.success">
-                      Kami telah mengirimkan email pengaturan kata sandi kepada
-                      Anda
+                    We have sent an e-mail to reset your password
                     </Text>
                   </HStack>
                 )}
@@ -76,8 +63,8 @@ const ResetPassword = () => {
                   <HStack color="brand.error" fontSize="xs" pt="3" height="6">
                     <Icon as={HiOutlineExclamationCircle} />
                     <Text color="brand.error">
-                      Terjadi kesalahan, pastikan Anda memasukkan email dengan
-                      benar dan coba lagi
+                    An error occurred, make sure you entered your email correctly
+                    and try again
                     </Text>
                   </HStack>
                 )}
@@ -90,11 +77,11 @@ const ResetPassword = () => {
                       !props.dirty || !props.isValid || sent || sending
                     }
                   >
-                    Kirimkan saya email
+                    Send e-mail
                   </Button>
                   <Box>
                     <Text fontFamily="source" fontSize="sm" textAlign="center">
-                      Mengalami kendala? Hubungi kami di{' '}
+                    Having trouble? Contact us at{' '}
                       <Link href="mailto:support@shopbite.co">
                         support@shopbite.co
                       </Link>{' '}

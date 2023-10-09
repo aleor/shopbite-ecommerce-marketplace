@@ -76,9 +76,6 @@ interface CustomProps<LinkOptions> {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>, link: string) => void;
   openShareDialogOnClick?: boolean;
   opts: LinkOptions;
-  /**
-   * URL of the shared page
-   */
   url: string;
   style?: React.CSSProperties;
   windowWidth?: number;
@@ -186,15 +183,6 @@ export default class ShareButton<LinkOptions> extends Component<
       ...rest
     } = this.props;
 
-    // const newClassName = cx(
-    //   'react-share__ShareButton',
-    //   {
-    //     'react-share__ShareButton--disabled': !!disabled,
-    //     disabled: !!disabled,
-    //   },
-    //   className
-    // );
-
     const newStyle = resetButtonStyle
       ? {
           backgroundColor: 'transparent',
@@ -215,7 +203,6 @@ export default class ShareButton<LinkOptions> extends Component<
       <button
         {...rest}
         aria-label={rest['aria-label'] || networkName}
-        // className={newClassName}
         onClick={this.handleClick}
         ref={forwardedRef}
         style={newStyle}

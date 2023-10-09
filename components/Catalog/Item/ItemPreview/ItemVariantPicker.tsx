@@ -1,11 +1,4 @@
-import {
-  HStack,
-  Radio,
-  RadioGroup,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Radio, RadioGroup, Stack, Text, VStack } from '@chakra-ui/react';
 
 import { useAppSelector } from '../../../../app/hooks';
 import { formatPrice } from '../../../../libs/formatPrice';
@@ -29,7 +22,7 @@ const ItemVariantPicker = ({
   return (
     <VStack alignItems="flex-start" width="100%">
       <Text fontFamily="poppins" fontSize="12px" fontWeight="medium">
-        Pilih Varian <sup>*</sup>
+        Select a Variant <sup>*</sup>
       </Text>
       <RadioGroup
         value={selectedVariant?.id}

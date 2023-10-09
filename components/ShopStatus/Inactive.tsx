@@ -9,9 +9,9 @@ const ShopInactive = () => {
       <Icon as={StoreIcon} width="64px" height="64px" />
 
       <Box textAlign="center">
-        <Text color="brand.black70">Toko ini sementara sedang tutup.</Text>
+        <Text color="brand.black70">This shop is temporarily closed.</Text>
         <Text color="brand.black70">
-          Anda dapat mencoba datang kembali nanti.
+          Please try to come back later.
         </Text>
       </Box>
     </ShopStatusLayout>

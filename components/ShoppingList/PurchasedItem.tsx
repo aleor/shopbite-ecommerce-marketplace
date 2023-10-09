@@ -1,15 +1,6 @@
 import { useCallback } from 'react';
 
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Skeleton,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, Image, Skeleton, Text, VStack } from '@chakra-ui/react';
 
 import { OrderItem } from '../../models/orderItem';
 import Price from '../Catalog/Item/Price';
@@ -94,7 +85,7 @@ const PurchasedItem = ({ item }: { item: OrderItem }) => {
                       spacing="4px" 
                       fontWeight="normal"
                     >
-                      <Text color="brand.black40">Varian: </Text>
+                      <Text color="brand.black40">Variant: </Text>
                       <Text>{item.variant}</Text>
                     </HStack>
                   )}
@@ -107,7 +98,7 @@ const PurchasedItem = ({ item }: { item: OrderItem }) => {
                       fontWeight="normal"
                     >
                       <Text color="brand.black40" flexShrink={0}>
-                        Tambahan:{' '}
+                        Add-ons:{' '}
                       </Text>
                       <Text>{item.addOns}</Text>
                     </HStack>

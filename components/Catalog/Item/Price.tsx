@@ -10,7 +10,7 @@ interface PriceProps {
 }
 
 const Price = (props: PriceProps) => {
-  const { price, rootProps, priceProps } = props;
+  const { price, priceProps } = props;
   const { currency } = useAppSelector((state) => state.shop);
 
   return (

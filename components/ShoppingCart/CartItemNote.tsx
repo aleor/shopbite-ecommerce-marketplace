@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { HiPencil } from 'react-icons/hi';
 
-import {
-  Button,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Text,
-} from '@chakra-ui/react';
+import { Button, Input, InputGroup, InputRightAddon, Text } from '@chakra-ui/react';
 
 import CharCounter from '../CharCounter';
 
@@ -33,7 +27,7 @@ const CartItemNote = ({
           onChange={(e) => setValue(e.target.value)}
           _focus={{ outline: 'none' }}
           _hover={{ borderColor: 'inherit' }}
-          placeholder="Tulis catatan..."
+          placeholder="Add a note..."
           fontSize="12px"
           size="sm"
           autoFocus
@@ -86,7 +80,7 @@ const CartItemNote = ({
         textAlign="left"
         wordBreak="break-word"
       >
-        {note || 'tambah catatan'}
+        {note || 'add notes'}
       </Text>
     </Button>
   );
