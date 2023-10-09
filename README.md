@@ -19,11 +19,11 @@ Key features:
 
 ## Disclosures
 
-- My role: sole developer.
 - This open-source release has been made possible with the Owner's permission (the Client who initiated and funded the platform development).
 - All design assets have been exclusively provided by the Client (through Figma), retaining full intellectual property rights.
 - While this version is fully functional, please note that certain limitations exist (e.g., real payments through Xendit are not supported).
 - Certain features may appear less polished or optimized. This is a deliberate trade-off to prioritize the app's Time-To-Market and its minimum viable product (MVP) nature.
+- My role: sole developer of the platform.
 
 ## Technologies
 
