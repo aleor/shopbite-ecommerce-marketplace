@@ -42,7 +42,7 @@ const CollectionsHeader = ({
             <Heading as="h4" fontFamily="poppins" fontWeight="semibold">
               <HStack>
                 <Text fontSize={{ base: '24px', sm: '16px', md: '24px' }}>
-                  Collection
+                  Collections
                 </Text>{' '}
                 <Text
                   color="brand.black40"

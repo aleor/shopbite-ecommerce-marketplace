@@ -16,7 +16,7 @@ export const menu: NavMenu = [
   {
     groupName: 'Shop Settings',
     items: [
-      { label: 'Items', query: 'items' },
+      { label: 'Products', query: 'items' },
       { label: 'Collections', query: 'collections' },
       { label: 'Links', query: 'links' },
     ],

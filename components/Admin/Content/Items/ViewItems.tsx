@@ -174,7 +174,7 @@ const ViewItems = ({
                 fontWeight="semibold"
                 fontSize={{ base: '24px', sm: '16px', md: '24px' }}
               >
-                Product
+                Products
               </Heading>
             </HStack>
           </HStack>

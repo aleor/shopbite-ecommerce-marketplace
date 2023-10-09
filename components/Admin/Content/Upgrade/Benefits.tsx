@@ -58,8 +58,8 @@ const Benefits = ({
               iconType={BsEmojiLaughing}
               text={
                 <Text fontFamily="source" fontSize="16px" fontWeight="normal">
-                  Semua manfaat dari Akun Standar. Lihat manfaat Akun Standar{' '}
-                  <Link onClick={onShowPackage}>disini</Link>
+                  All the benefits of a Standard Account. See the benefits of a Standard Account{' '}
+                  <Link onClick={onShowPackage}>here</Link>
                 </Text>
               }
             />
